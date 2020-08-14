@@ -1,0 +1,59 @@
+.nav-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 5rem;
+  background-color: $green;
+  @media only screen and (max-width: $bp-phone) {
+    flex-direction: column;
+    padding: 1rem 2rem;
+  }
+
+  &__logo {
+    font-size: 2rem;
+    color: $white;
+    text-transform: uppercase;
+    font-family: "Overlock", cursive;
+    font-weight: 700;
+    @media only screen and (max-width: 17em) {
+      font-size: 2rem;
+    }
+    @media only screen and (max-width: $bp-phone) {
+      font-size: 3rem;
+      font-weight: bold;
+    }
+  }
+}
+.currency {
+  @media only screen and (max-width: $bp-phone) {
+    margin-right: auto;
+  }
+
+  &__select {
+    padding: 0.5rem 1rem;
+    outline: none;
+    border: none;
+    border-radius: 2px;
+    @media only screen and (max-width: 17em) {
+      padding: 0.6rem;
+    }
+    @media only screen and (max-width: $bp-phone) {
+      padding: 1rem;
+    }
+
+    option {
+      font-size: 1.3rem;
+    }
+  }
+}
+
+.signup:link,
+.signup:visited {
+  @include link;
+  margin-right: 2rem;
+}
+
+.login:link,
+.login:visited {
+  @include link;
+}

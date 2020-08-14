@@ -1,0 +1,38 @@
+.prev svg,
+.prev-1 svg,
+.next svg,
+.next-1 svg {
+  height: 5rem;
+  width: 5rem;
+  cursor: pointer;
+  @media only screen and (max-width: $bp-phone) {
+    height: 3rem;
+    width: 3rem;
+  }
+}
+.prev {
+  position: absolute;
+  left: 1rem;
+  top: 30%;
+}
+.prev-1 {
+  position: absolute;
+  left: 1rem;
+  top: 50%;
+  @media only screen and (max-width: $bp-phone) {
+    top: 55%;
+  }
+}
+.next {
+  position: absolute;
+  right: 1rem;
+  top: 30%;
+}
+.next-1 {
+  position: absolute;
+  right: 1rem;
+  top: 50%;
+  @media only screen and (max-width: $bp-phone) {
+    top: 55%;
+  }
+}

@@ -1,0 +1,1113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loja de mobiliário</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/>
+    <!-- <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js" defer></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js" defer></script>
+    <script type="text/javascript" src="slick/slick.min.js" defer></script> -->
+    <script src="app.js" defer></script>
+</head>
+<body>
+   <div class="wrapper">
+       <header class="header">
+           <!-- TOP NAVBAR -->
+           <nav class="nav-top">
+               <div class="currency">
+                   <select name="currency" id="currency" class="currency__select">
+                       <option value="mzn">Metical</option>
+                       <option value="mzn">Dólar</option>
+                       <option value="mzn">Rand</option>
+                   </select>
+               </div>
+               <!-- BRAND -->
+               <div class="nav-top__logo">Imobiliária</div>
+               <!-- UAERS -->
+               <div class="nav-top__user">
+                   <a href="#" class="signup">Registar-se</a>
+                   <a href="#" class="login">Entrar</a>
+               </div>
+           </nav>
+
+           <!-- SECOND NAVBAR  -->
+           <svg class="hamburger" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g id="icon/navigation/menu_24px">
+                <path id="icon/navigation/menu_24px_2" fill-rule="evenodd" clip-rule="evenodd" d="M4 8C3.45 8 3 7.55 3 7C3 6.45 3.45 6 4 6H20C20.55 6 21 6.45 21 7C21 7.55 20.55 8 20 8H4ZM4 13H20C20.55 13 21 12.55 21 12C21 11.45 20.55 11 20 11H4C3.45 11 3 11.45 3 12C3 12.55 3.45 13 4 13ZM4 18H20C20.55 18 21 17.55 21 17C21 16.45 20.55 16 20 16H4C3.45 16 3 16.45 3 17C3 17.55 3.45 18 4 18Z" fill="#6D7D8B"/>
+                </g>
+            </svg>
+           <nav class="second-nav">
+                <!-- NAV LIST -->
+               <ul class="list">
+                   <li class="list__item"><a href="#" class="list__link">ínicio</a></li>
+                   <li class="list__item"><a href="#" class="list__link">colleções</a></li>
+                   <li class="list__item"><a href="#" class="list__link">Loja</a></li>
+                   <li class="list__item"><a href="#" class="list__link">Sobre</a></li>
+               </ul>
+               <!-- NAV ACTION -->
+               <div class="second-nav__action">
+                    <div class="second-nav__action-group">
+                        <input type="search" class="second-nav__input" placeholder="Pesquisar produto">
+                        <svg class="second-nav__icon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g id="icon/action/search_24px">
+                            <path id="icon/action/search_24px_2" fill-rule="evenodd" clip-rule="evenodd" d="M15.1867 14.4716H15.9767L20.2167 18.7316C20.6267 19.1416 20.6267 19.8116 20.2167 20.2216C19.8067 20.6316 19.1367 20.6316 18.7267 20.2216L14.4767 15.9716V15.1816L14.2067 14.9016C12.8067 16.1016 10.8967 16.7216 8.8667 16.3816C6.0867 15.9116 3.8667 13.5916 3.5267 10.7916C3.0067 6.56157 6.5667 3.00157 10.7967 3.52157C13.5967 3.86157 15.9167 6.08157 16.3867 8.86157C16.7267 10.8916 16.1067 12.8016 14.9067 14.2016L15.1867 14.4716ZM5.4767 9.97157C5.4767 12.4616 7.4867 14.4716 9.9767 14.4716C12.4667 14.4716 14.4767 12.4616 14.4767 9.97157C14.4767 7.48157 12.4667 5.47157 9.9767 5.47157C7.4867 5.47157 5.4767 7.48157 5.4767 9.97157Z" fill="#6D7D8B"/>
+                            </g>
+                        </svg>   
+                    </div>
+                    <div class="second-nav__action-group second-nav__action-group--icon">
+                        <svg class="second-nav__action-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g id="icon/action/add_shopping_cart_24px">
+                             <path id="icon/action/add_shopping_cart_24px_2" fill-rule="evenodd" clip-rule="evenodd" d="M14.0972 8.5C14.0972 9.05 13.6472 9.5 13.0972 9.5C12.5472 9.5 12.0972 9.05 12.0972 8.5V6.5H10.0972C9.54717 6.5 9.09717 6.05 9.09717 5.5C9.09717 4.95 9.54717 4.5 10.0972 4.5H12.0972V2.5C12.0972 1.95 12.5472 1.5 13.0972 1.5C13.6472 1.5 14.0972 1.95 14.0972 2.5V4.5H16.0972C16.6472 4.5 17.0972 4.95 17.0972 5.5C17.0972 6.05 16.6472 6.5 16.0972 6.5H14.0972V8.5ZM6.10717 20.5C6.10717 19.4 6.99717 18.5 8.09717 18.5C9.19717 18.5 10.0972 19.4 10.0972 20.5C10.0972 21.6 9.19717 22.5 8.09717 22.5C6.99717 22.5 6.10717 21.6 6.10717 20.5ZM18.0972 18.5C16.9972 18.5 16.1072 19.4 16.1072 20.5C16.1072 21.6 16.9972 22.5 18.0972 22.5C19.1972 22.5 20.0972 21.6 20.0972 20.5C20.0972 19.4 19.1972 18.5 18.0972 18.5ZM16.6472 13.5H9.19717L8.09717 15.5H19.0972C19.6472 15.5 20.0972 15.95 20.0972 16.5C20.0972 17.05 19.6472 17.5 19.0972 17.5H8.09717C6.57717 17.5 5.61717 15.87 6.34717 14.53L7.69717 12.09L4.09717 4.5H3.09717C2.54717 4.5 2.09717 4.05 2.09717 3.5C2.09717 2.95 2.54717 2.5 3.09717 2.5H4.73717C5.11717 2.5 5.47717 2.72 5.63717 3.07L9.62717 11.5H16.6472L20.0372 5.37C20.2972 4.89 20.9072 4.72 21.3872 4.98C21.8672 5.25 22.0472 5.86 21.7772 6.34L18.3972 12.47C18.0572 13.09 17.3972 13.5 16.6472 13.5Z" fill="#6D7D8B"/>
+                            </g>
+                        </svg>
+                    </div>                                   
+               </div>
+           </nav>
+           <!-- SECOND NAVBAR ENDS -->
+       </header>
+       <!-- HEADER ENDS -->
+
+       <!-- COVER WITH SLIDER -->
+       <div class="cover">
+           <div class="slider">
+               <div class="slider__item">
+                   <div class="slider__item-1">
+                       <span class="cover__text">Bem vindo a nossa</span>
+                       <h1 class="cover__title">Loja de móveis</h1>
+                       <a href="#" class="cover__btn">Comprar agora</a>
+                   </div>
+               </div>
+
+               <div class="slider__item">
+                   <div class="slider__item-2">
+                       <span class="cover__text">Mobília de qualidade</span>
+                       <h1 class="cover__title">a partir de 6.500 <sup>MT</sup></h1>
+                       <a href="#" class="cover__btn cover__btn-1">Ver tudo</a>
+                   </div>
+               </div>
+           </div>
+       </div>
+
+         <!-- PRESENTATION OF PRODUCTS -->
+        <div class="presentation">
+            <div class="slider-1">
+                <div class="slider__item">
+                    <div class="card">
+                        <div class="card__img"><img src="./img/armario-1.jpg" alt=""></div>
+                        <div class="card__text">Armário</div>
+                    </div>
+                </div>
+
+                <div class="slider__item">
+                    <div class="card">
+                        <div class="card__img"><img src="./img/armario-2.jpg" alt=""></div>
+                        <div class="card__text">Armário de cozinha</div>
+                    </div>
+                </div>
+
+                <div class="slider__item">
+                    <div class="card">
+                        <div class="card__img"><img src="./img/bed.jpg" alt=""></div>
+                        <div class="card__text">Cama para casal</div>
+                    </div>
+                </div>
+
+                <div class="slider__item">
+                    <div class="card">
+                        <div class="card__img"><img src="./img/chair.jpg" alt=""></div>
+                        <div class="card__text">Cadeira de varanda</div>
+                    </div>
+                </div>
+
+                <div class="slider__item">
+                    <div class="card">
+                        <div class="card__img"><img src="./img/chair-2.jpg" alt=""></div>
+                        <div class="card__text">Cadeira de praia</div>
+                    </div>
+                </div>
+
+                <div class="slider__item">
+                    <div class="card">
+                        <div class="card__img"><img src="./img/bed-2.jpg" alt=""></div>
+                        <div class="card__text">Cadeira de praia</div>
+                    </div>
+                </div>
+                </div>
+
+                <!-- ARROWS FOR SLIDER 2 -->
+                <span class="prev">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g id="icon/navigation/chevron_left_24px">
+                        <path id="icon/navigation/chevron_left_24px_2" d="M15 6.70496C14.8132 6.51771 14.5595 6.41248 14.295 6.41248C14.0305 6.41248 13.7769 6.51771 13.59 6.70496L9.00002 11.295C8.61002 11.685 8.61002 12.315 9.00002 12.705L13.59 17.295C13.98 17.685 14.61 17.685 15 17.295C15.39 16.905 15.39 16.275 15 15.885L11.12 11.995L15 8.11496C15.39 7.72496 15.38 7.08496 15 6.70496Z" fill="#6D7D8B"/>
+                        </g>
+                    </svg>
+                </span>
+                <span class="next">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g id="icon/navigation/chevron_right_24px">
+                        <path id="icon/navigation/chevron_right_24px_2" d="M9.00002 6.71063C8.61002 7.10063 8.61002 7.73063 9.00002 8.12063L12.88 12.0006L9.00002 15.8806C8.61002 16.2706 8.61002 16.9006 9.00002 17.2906C9.39002 17.6806 10.02 17.6806 10.41 17.2906L15 12.7006C15.39 12.3106 15.39 11.6806 15 11.2906L10.41 6.70063C10.03 6.32063 9.39002 6.32063 9.00002 6.71063Z" fill="#6D7D8B"/>
+                        </g>
+                    </svg>
+                </span>
+        </div>
+
+        <!-- TOP PRODUCTS -->
+        <section class="top-product">
+            <div class="product">
+                <div class="product__text">
+                    <h2 class="product__title">Produtos em alta</h2>
+                    <p class="product__paragraph">Lorem ipsum dolor 
+                        sit amet consectetur adipisicing elit. Molestiae consectetur 
+                        porro autem aperiam cupiditate ab dolores illo qui, vitae,       
+                    </p>
+                </div>
+
+                <div class="slider-3">
+                    <div class="slider__item">
+                        <div class="product-card">
+                            <img src="./img/lamp.jpg" alt="lamp" class="product-card__img">
+                            <h3 class="product-card__name">Lampada de mesa</h3>
+                            <div class="product-card__rating">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <g id="icon/toggle/star_outline_24px">
+                                    <path id="icon/toggle/star_outline_24px_2" fill-rule="evenodd" clip-rule="evenodd" d="M14.8084 8.87458L19.6484 9.29458C20.5284 9.36458 20.8784 10.4646 20.2084 11.0446L16.5384 14.2246L17.6384 18.9546C17.8384 19.8146 16.9084 20.4946 16.1484 20.0346L11.9984 17.5246L7.84836 20.0246C7.08836 20.4846 6.15836 19.8046 6.35836 18.9446L7.45836 14.2246L3.78836 11.0446C3.11836 10.4646 3.47836 9.36458 4.35836 9.29458L9.18836 8.88458L11.0784 4.42458C11.4184 3.61458 12.5784 3.61458 12.9184 4.42458L14.8084 8.87458ZM8.23836 17.9246L11.9984 15.6546L15.7684 17.9346L14.7684 13.6546L18.0884 10.7746L13.7084 10.3946L11.9984 6.35458L10.2984 10.3846L5.91836 10.7646L9.23836 13.6446L8.23836 17.9246Z" fill="#6D7D8B"/>
+                                    </g>
+                                </svg>
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <g id="icon/toggle/star_outline_24px">
+                                    <path id="icon/toggle/star_outline_24px_2" fill-rule="evenodd" clip-rule="evenodd" d="M14.8084 8.87458L19.6484 9.29458C20.5284 9.36458 20.8784 10.4646 20.2084 11.0446L16.5384 14.2246L17.6384 18.9546C17.8384 19.8146 16.9084 20.4946 16.1484 20.0346L11.9984 17.5246L7.84836 20.0246C7.08836 20.4846 6.15836 19.8046 6.35836 18.9446L7.45836 14.2246L3.78836 11.0446C3.11836 10.4646 3.47836 9.36458 4.35836 9.29458L9.18836 8.88458L11.0784 4.42458C11.4184 3.61458 12.5784 3.61458 12.9184 4.42458L14.8084 8.87458ZM8.23836 17.9246L11.9984 15.6546L15.7684 17.9346L14.7684 13.6546L18.0884 10.7746L13.7084 10.3946L11.9984 6.35458L10.2984 10.3846L5.91836 10.7646L9.23836 13.6446L8.23836 17.9246Z" fill="#6D7D8B"/>
+                                    </g>
+                                </svg>
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <g id="icon/toggle/star_outline_24px">
+                                    <path id="icon/toggle/star_outline_24px_2" fill-rule="evenodd" clip-rule="evenodd" d="M14.8084 8.87458L19.6484 9.29458C20.5284 9.36458 20.8784 10.4646 20.2084 11.0446L16.5384 14.2246L17.6384 18.9546C17.8384 19.8146 16.9084 20.4946 16.1484 20.0346L11.9984 17.5246L7.84836 20.0246C7.08836 20.4846 6.15836 19.8046 6.35836 18.9446L7.45836 14.2246L3.78836 11.0446C3.11836 10.4646 3.47836 9.36458 4.35836 9.29458L9.18836 8.88458L11.0784 4.42458C11.4184 3.61458 12.5784 3.61458 12.9184 4.42458L14.8084 8.87458ZM8.23836 17.9246L11.9984 15.6546L15.7684 17.9346L14.7684 13.6546L18.0884 10.7746L13.7084 10.3946L11.9984 6.35458L10.2984 10.3846L5.91836 10.7646L9.23836 13.6446L8.23836 17.9246Z" fill="#6D7D8B"/>
+                                    </g>
+                                </svg>
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <g id="icon/toggle/star_outline_24px">
+                                    <path id="icon/toggle/star_outline_24px_2" fill-rule="evenodd" clip-rule="evenodd" d="M14.8084 8.87458L19.6484 9.29458C20.5284 9.36458 20.8784 10.4646 20.2084 11.0446L16.5384 14.2246L17.6384 18.9546C17.8384 19.8146 16.9084 20.4946 16.1484 20.0346L11.9984 17.5246L7.84836 20.0246C7.08836 20.4846 6.15836 19.8046 6.35836 18.9446L7.45836 14.2246L3.78836 11.0446C3.11836 10.4646 3.47836 9.36458 4.35836 9.29458L9.18836 8.88458L11.0784 4.42458C11.4184 3.61458 12.5784 3.61458 12.9184 4.42458L14.8084 8.87458ZM8.23836 17.9246L11.9984 15.6546L15.7684 17.9346L14.7684 13.6546L18.0884 10.7746L13.7084 10.3946L11.9984 6.35458L10.2984 10.3846L5.91836 10.7646L9.23836 13.6446L8.23836 17.9246Z" fill="#6D7D8B"/>
+                                    </g>
+                                </svg>
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <g id="icon/toggle/star_outline_24px">
+                                    <path id="icon/toggle/star_outline_24px_2" fill-rule="evenodd" clip-rule="evenodd" d="M14.8084 8.87458L19.6484 9.29458C20.5284 9.36458 20.8784 10.4646 20.2084 11.0446L16.5384 14.2246L17.6384 18.9546C17.8384 19.8146 16.9084 20.4946 16.1484 20.0346L11.9984 17.5246L7.84836 20.0246C7.08836 20.4846 6.15836 19.8046 6.35836 18.9446L7.45836 14.2246L3.78836 11.0446C3.11836 10.4646 3.47836 9.36458 4.35836 9.29458L9.18836 8.88458L11.0784 4.42458C11.4184 3.61458 12.5784 3.61458 12.9184 4.42458L14.8084 8.87458ZM8.23836 17.9246L11.9984 15.6546L15.7684 17.9346L14.7684 13.6546L18.0884 10.7746L13.7084 10.3946L11.9984 6.35458L10.2984 10.3846L5.91836 10.7646L9.23836 13.6446L8.23836 17.9246Z" fill="#6D7D8B"/>
+                                    </g>
+                                </svg>
+                            </div>
+                            <p class="product-card__price">10.500 <sup>Mt</sup></p>
+                            <a href="#" class="product-card__btn">Adicionar ao carrinho</a>
+
+                        </div>
+                    </div>
+
+                    <div class="slider__item">
+                        <div class="product-card">
+                            <img src="./img/lamp-1.jpg" alt="lamp" class="product-card__img">
+                            <h3 class="product-card__name">Lampada de mesa</h3>
+                            <div class="product-card__rating">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <g id="icon/toggle/star_outline_24px">
+                                    <path id="icon/toggle/star_outline_24px_2" fill-rule="evenodd" clip-rule="evenodd" d="M14.8084 8.87458L19.6484 9.29458C20.5284 9.36458 20.8784 10.4646 20.2084 11.0446L16.5384 14.2246L17.6384 18.9546C17.8384 19.8146 16.9084 20.4946 16.1484 20.0346L11.9984 17.5246L7.84836 20.0246C7.08836 20.4846 6.15836 19.8046 6.35836 18.9446L7.45836 14.2246L3.78836 11.0446C3.11836 10.4646 3.47836 9.36458 4.35836 9.29458L9.18836 8.88458L11.0784 4.42458C11.4184 3.61458 12.5784 3.61458 12.9184 4.42458L14.8084 8.87458ZM8.23836 17.9246L11.9984 15.6546L15.7684 17.9346L14.7684 13.6546L18.0884 10.7746L13.7084 10.3946L11.9984 6.35458L10.2984 10.3846L5.91836 10.7646L9.23836 13.6446L8.23836 17.9246Z" fill="#6D7D8B"/>
+                                    </g>
+                                </svg>
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <g id="icon/toggle/star_outline_24px">
+                                    <path id="icon/toggle/star_outline_24px_2" fill-rule="evenodd" clip-rule="evenodd" d="M14.8084 8.87458L19.6484 9.29458C20.5284 9.36458 20.8784 10.4646 20.2084 11.0446L16.5384 14.2246L17.6384 18.9546C17.8384 19.8146 16.9084 20.4946 16.1484 20.0346L11.9984 17.5246L7.84836 20.0246C7.08836 20.4846 6.15836 19.8046 6.35836 18.9446L7.45836 14.2246L3.78836 11.0446C3.11836 10.4646 3.47836 9.36458 4.35836 9.29458L9.18836 8.88458L11.0784 4.42458C11.4184 3.61458 12.5784 3.61458 12.9184 4.42458L14.8084 8.87458ZM8.23836 17.9246L11.9984 15.6546L15.7684 17.9346L14.7684 13.6546L18.0884 10.7746L13.7084 10.3946L11.9984 6.35458L10.2984 10.3846L5.91836 10.7646L9.23836 13.6446L8.23836 17.9246Z" fill="#6D7D8B"/>
+                                    </g>
+                                </svg>
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <g id="icon/toggle/star_outline_24px">
+                                    <path id="icon/toggle/star_outline_24px_2" fill-rule="evenodd" clip-rule="evenodd" d="M14.8084 8.87458L19.6484 9.29458C20.5284 9.36458 20.8784 10.4646 20.2084 11.0446L16.5384 14.2246L17.6384 18.9546C17.8384 19.8146 16.9084 20.4946 16.1484 20.0346L11.9984 17.5246L7.84836 20.0246C7.08836 20.4846 6.15836 19.8046 6.35836 18.9446L7.45836 14.2246L3.78836 11.0446C3.11836 10.4646 3.47836 9.36458 4.35836 9.29458L9.18836 8.88458L11.0784 4.42458C11.4184 3.61458 12.5784 3.61458 12.9184 4.42458L14.8084 8.87458ZM8.23836 17.9246L11.9984 15.6546L15.7684 17.9346L14.7684 13.6546L18.0884 10.7746L13.7084 10.3946L11.9984 6.35458L10.2984 10.3846L5.91836 10.7646L9.23836 13.6446L8.23836 17.9246Z" fill="#6D7D8B"/>
+                                    </g>
+                                </svg>
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <g id="icon/toggle/star_outline_24px">
+                                    <path id="icon/toggle/star_outline_24px_2" fill-rule="evenodd" clip-rule="evenodd" d="M14.8084 8.87458L19.6484 9.29458C20.5284 9.36458 20.8784 10.4646 20.2084 11.0446L16.5384 14.2246L17.6384 18.9546C17.8384 19.8146 16.9084 20.4946 16.1484 20.0346L11.9984 17.5246L7.84836 20.0246C7.08836 20.4846 6.15836 19.8046 6.35836 18.9446L7.45836 14.2246L3.78836 11.0446C3.11836 10.4646 3.47836 9.36458 4.35836 9.29458L9.18836 8.88458L11.0784 4.42458C11.4184 3.61458 12.5784 3.61458 12.9184 4.42458L14.8084 8.87458ZM8.23836 17.9246L11.9984 15.6546L15.7684 17.9346L14.7684 13.6546L18.0884 10.7746L13.7084 10.3946L11.9984 6.35458L10.2984 10.3846L5.91836 10.7646L9.23836 13.6446L8.23836 17.9246Z" fill="#6D7D8B"/>
+                                    </g>
+                                </svg>
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <g id="icon/toggle/star_outline_24px">
+                                    <path id="icon/toggle/star_outline_24px_2" fill-rule="evenodd" clip-rule="evenodd" d="M14.8084 8.87458L19.6484 9.29458C20.5284 9.36458 20.8784 10.4646 20.2084 11.0446L16.5384 14.2246L17.6384 18.9546C17.8384 19.8146 16.9084 20.4946 16.1484 20.0346L11.9984 17.5246L7.84836 20.0246C7.08836 20.4846 6.15836 19.8046 6.35836 18.9446L7.45836 14.2246L3.78836 11.0446C3.11836 10.4646 3.47836 9.36458 4.35836 9.29458L9.18836 8.88458L11.0784 4.42458C11.4184 3.61458 12.5784 3.61458 12.9184 4.42458L14.8084 8.87458ZM8.23836 17.9246L11.9984 15.6546L15.7684 17.9346L14.7684 13.6546L18.0884 10.7746L13.7084 10.3946L11.9984 6.35458L10.2984 10.3846L5.91836 10.7646L9.23836 13.6446L8.23836 17.9246Z" fill="#6D7D8B"/>
+                                    </g>
+                                </svg>
+                            </div>
+                            <p class="product-card__price">6.599 <sup>Mt</sup></p>
+                            <a href="#" class="product-card__btn">Adicionar ao carrinho</a>
+                        </div>
+                    </div>
+                    <div class="slider__item">
+                        <div class="product-card">
+                            <img src="./img/sofa-1.jpg" alt="lamp" class="product-card__img">
+                            <h3 class="product-card__name">Sofá </h3>
+                            <div class="product-card__rating">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <g id="icon/toggle/star_outline_24px">
+                                    <path id="icon/toggle/star_outline_24px_2" fill-rule="evenodd" clip-rule="evenodd" d="M14.8084 8.87458L19.6484 9.29458C20.5284 9.36458 20.8784 10.4646 20.2084 11.0446L16.5384 14.2246L17.6384 18.9546C17.8384 19.8146 16.9084 20.4946 16.1484 20.0346L11.9984 17.5246L7.84836 20.0246C7.08836 20.4846 6.15836 19.8046 6.35836 18.9446L7.45836 14.2246L3.78836 11.0446C3.11836 10.4646 3.47836 9.36458 4.35836 9.29458L9.18836 8.88458L11.0784 4.42458C11.4184 3.61458 12.5784 3.61458 12.9184 4.42458L14.8084 8.87458ZM8.23836 17.9246L11.9984 15.6546L15.7684 17.9346L14.7684 13.6546L18.0884 10.7746L13.7084 10.3946L11.9984 6.35458L10.2984 10.3846L5.91836 10.7646L9.23836 13.6446L8.23836 17.9246Z" fill="#6D7D8B"/>
+                                    </g>
+                                </svg>
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <g id="icon/toggle/star_outline_24px">
+                                    <path id="icon/toggle/star_outline_24px_2" fill-rule="evenodd" clip-rule="evenodd" d="M14.8084 8.87458L19.6484 9.29458C20.5284 9.36458 20.8784 10.4646 20.2084 11.0446L16.5384 14.2246L17.6384 18.9546C17.8384 19.8146 16.9084 20.4946 16.1484 20.0346L11.9984 17.5246L7.84836 20.0246C7.08836 20.4846 6.15836 19.8046 6.35836 18.9446L7.45836 14.2246L3.78836 11.0446C3.11836 10.4646 3.47836 9.36458 4.35836 9.29458L9.18836 8.88458L11.0784 4.42458C11.4184 3.61458 12.5784 3.61458 12.9184 4.42458L14.8084 8.87458ZM8.23836 17.9246L11.9984 15.6546L15.7684 17.9346L14.7684 13.6546L18.0884 10.7746L13.7084 10.3946L11.9984 6.35458L10.2984 10.3846L5.91836 10.7646L9.23836 13.6446L8.23836 17.9246Z" fill="#6D7D8B"/>
+                                    </g>
+                                </svg>
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <g id="icon/toggle/star_outline_24px">
+                                    <path id="icon/toggle/star_outline_24px_2" fill-rule="evenodd" clip-rule="evenodd" d="M14.8084 8.87458L19.6484 9.29458C20.5284 9.36458 20.8784 10.4646 20.2084 11.0446L16.5384 14.2246L17.6384 18.9546C17.8384 19.8146 16.9084 20.4946 16.1484 20.0346L11.9984 17.5246L7.84836 20.0246C7.08836 20.4846 6.15836 19.8046 6.35836 18.9446L7.45836 14.2246L3.78836 11.0446C3.11836 10.4646 3.47836 9.36458 4.35836 9.29458L9.18836 8.88458L11.0784 4.42458C11.4184 3.61458 12.5784 3.61458 12.9184 4.42458L14.8084 8.87458ZM8.23836 17.9246L11.9984 15.6546L15.7684 17.9346L14.7684 13.6546L18.0884 10.7746L13.7084 10.3946L11.9984 6.35458L10.2984 10.3846L5.91836 10.7646L9.23836 13.6446L8.23836 17.9246Z" fill="#6D7D8B"/>
+                                    </g>
+                                </svg>
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <g id="icon/toggle/star_outline_24px">
+                                    <path id="icon/toggle/star_outline_24px_2" fill-rule="evenodd" clip-rule="evenodd" d="M14.8084 8.87458L19.6484 9.29458C20.5284 9.36458 20.8784 10.4646 20.2084 11.0446L16.5384 14.2246L17.6384 18.9546C17.8384 19.8146 16.9084 20.4946 16.1484 20.0346L11.9984 17.5246L7.84836 20.0246C7.08836 20.4846 6.15836 19.8046 6.35836 18.9446L7.45836 14.2246L3.78836 11.0446C3.11836 10.4646 3.47836 9.36458 4.35836 9.29458L9.18836 8.88458L11.0784 4.42458C11.4184 3.61458 12.5784 3.61458 12.9184 4.42458L14.8084 8.87458ZM8.23836 17.9246L11.9984 15.6546L15.7684 17.9346L14.7684 13.6546L18.0884 10.7746L13.7084 10.3946L11.9984 6.35458L10.2984 10.3846L5.91836 10.7646L9.23836 13.6446L8.23836 17.9246Z" fill="#6D7D8B"/>
+                                    </g>
+                                </svg>
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <g id="icon/toggle/star_outline_24px">
+                                    <path id="icon/toggle/star_outline_24px_2" fill-rule="evenodd" clip-rule="evenodd" d="M14.8084 8.87458L19.6484 9.29458C20.5284 9.36458 20.8784 10.4646 20.2084 11.0446L16.5384 14.2246L17.6384 18.9546C17.8384 19.8146 16.9084 20.4946 16.1484 20.0346L11.9984 17.5246L7.84836 20.0246C7.08836 20.4846 6.15836 19.8046 6.35836 18.9446L7.45836 14.2246L3.78836 11.0446C3.11836 10.4646 3.47836 9.36458 4.35836 9.29458L9.18836 8.88458L11.0784 4.42458C11.4184 3.61458 12.5784 3.61458 12.9184 4.42458L14.8084 8.87458ZM8.23836 17.9246L11.9984 15.6546L15.7684 17.9346L14.7684 13.6546L18.0884 10.7746L13.7084 10.3946L11.9984 6.35458L10.2984 10.3846L5.91836 10.7646L9.23836 13.6446L8.23836 17.9246Z" fill="#6D7D8B"/>
+                                    </g>
+                                </svg>
+                            </div>
+                            <p class="product-card__price">46.599 <sup>Mt</sup></p>
+                            <a href="#" class="product-card__btn">Adicionar ao carrinho</a>
+                        </div>
+                    </div>
+                    <div class="slider__item">
+                        <div class="product-card">
+                            <img src="./img/table.jpg" alt="lamp" class="product-card__img">
+                            <h3 class="product-card__name">Mesa</h3>
+                            <div class="product-card__rating">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <g id="icon/toggle/star_outline_24px">
+                                    <path id="icon/toggle/star_outline_24px_2" fill-rule="evenodd" clip-rule="evenodd" d="M14.8084 8.87458L19.6484 9.29458C20.5284 9.36458 20.8784 10.4646 20.2084 11.0446L16.5384 14.2246L17.6384 18.9546C17.8384 19.8146 16.9084 20.4946 16.1484 20.0346L11.9984 17.5246L7.84836 20.0246C7.08836 20.4846 6.15836 19.8046 6.35836 18.9446L7.45836 14.2246L3.78836 11.0446C3.11836 10.4646 3.47836 9.36458 4.35836 9.29458L9.18836 8.88458L11.0784 4.42458C11.4184 3.61458 12.5784 3.61458 12.9184 4.42458L14.8084 8.87458ZM8.23836 17.9246L11.9984 15.6546L15.7684 17.9346L14.7684 13.6546L18.0884 10.7746L13.7084 10.3946L11.9984 6.35458L10.2984 10.3846L5.91836 10.7646L9.23836 13.6446L8.23836 17.9246Z" fill="#6D7D8B"/>
+                                    </g>
+                                </svg>
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <g id="icon/toggle/star_outline_24px">
+                                    <path id="icon/toggle/star_outline_24px_2" fill-rule="evenodd" clip-rule="evenodd" d="M14.8084 8.87458L19.6484 9.29458C20.5284 9.36458 20.8784 10.4646 20.2084 11.0446L16.5384 14.2246L17.6384 18.9546C17.8384 19.8146 16.9084 20.4946 16.1484 20.0346L11.9984 17.5246L7.84836 20.0246C7.08836 20.4846 6.15836 19.8046 6.35836 18.9446L7.45836 14.2246L3.78836 11.0446C3.11836 10.4646 3.47836 9.36458 4.35836 9.29458L9.18836 8.88458L11.0784 4.42458C11.4184 3.61458 12.5784 3.61458 12.9184 4.42458L14.8084 8.87458ZM8.23836 17.9246L11.9984 15.6546L15.7684 17.9346L14.7684 13.6546L18.0884 10.7746L13.7084 10.3946L11.9984 6.35458L10.2984 10.3846L5.91836 10.7646L9.23836 13.6446L8.23836 17.9246Z" fill="#6D7D8B"/>
+                                    </g>
+                                </svg>
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <g id="icon/toggle/star_outline_24px">
+                                    <path id="icon/toggle/star_outline_24px_2" fill-rule="evenodd" clip-rule="evenodd" d="M14.8084 8.87458L19.6484 9.29458C20.5284 9.36458 20.8784 10.4646 20.2084 11.0446L16.5384 14.2246L17.6384 18.9546C17.8384 19.8146 16.9084 20.4946 16.1484 20.0346L11.9984 17.5246L7.84836 20.0246C7.08836 20.4846 6.15836 19.8046 6.35836 18.9446L7.45836 14.2246L3.78836 11.0446C3.11836 10.4646 3.47836 9.36458 4.35836 9.29458L9.18836 8.88458L11.0784 4.42458C11.4184 3.61458 12.5784 3.61458 12.9184 4.42458L14.8084 8.87458ZM8.23836 17.9246L11.9984 15.6546L15.7684 17.9346L14.7684 13.6546L18.0884 10.7746L13.7084 10.3946L11.9984 6.35458L10.2984 10.3846L5.91836 10.7646L9.23836 13.6446L8.23836 17.9246Z" fill="#6D7D8B"/>
+                                    </g>
+                                </svg>
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <g id="icon/toggle/star_outline_24px">
+                                    <path id="icon/toggle/star_outline_24px_2" fill-rule="evenodd" clip-rule="evenodd" d="M14.8084 8.87458L19.6484 9.29458C20.5284 9.36458 20.8784 10.4646 20.2084 11.0446L16.5384 14.2246L17.6384 18.9546C17.8384 19.8146 16.9084 20.4946 16.1484 20.0346L11.9984 17.5246L7.84836 20.0246C7.08836 20.4846 6.15836 19.8046 6.35836 18.9446L7.45836 14.2246L3.78836 11.0446C3.11836 10.4646 3.47836 9.36458 4.35836 9.29458L9.18836 8.88458L11.0784 4.42458C11.4184 3.61458 12.5784 3.61458 12.9184 4.42458L14.8084 8.87458ZM8.23836 17.9246L11.9984 15.6546L15.7684 17.9346L14.7684 13.6546L18.0884 10.7746L13.7084 10.3946L11.9984 6.35458L10.2984 10.3846L5.91836 10.7646L9.23836 13.6446L8.23836 17.9246Z" fill="#6D7D8B"/>
+                                    </g>
+                                </svg>
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <g id="icon/toggle/star_outline_24px">
+                                    <path id="icon/toggle/star_outline_24px_2" fill-rule="evenodd" clip-rule="evenodd" d="M14.8084 8.87458L19.6484 9.29458C20.5284 9.36458 20.8784 10.4646 20.2084 11.0446L16.5384 14.2246L17.6384 18.9546C17.8384 19.8146 16.9084 20.4946 16.1484 20.0346L11.9984 17.5246L7.84836 20.0246C7.08836 20.4846 6.15836 19.8046 6.35836 18.9446L7.45836 14.2246L3.78836 11.0446C3.11836 10.4646 3.47836 9.36458 4.35836 9.29458L9.18836 8.88458L11.0784 4.42458C11.4184 3.61458 12.5784 3.61458 12.9184 4.42458L14.8084 8.87458ZM8.23836 17.9246L11.9984 15.6546L15.7684 17.9346L14.7684 13.6546L18.0884 10.7746L13.7084 10.3946L11.9984 6.35458L10.2984 10.3846L5.91836 10.7646L9.23836 13.6446L8.23836 17.9246Z" fill="#6D7D8B"/>
+                                    </g>
+                                </svg>
+                            </div>
+                            <p class="product-card__price">17.999 <sup>Mt</sup></p>
+                            <a href="#" class="product-card__btn">Adicionar ao carrinho</a>
+                        </div>
+                    </div>
+                    <div class="slider__item">
+                        <div class="product-card">
+                            <img src="./img/sofa-2.jpg" alt="lamp" class="product-card__img">
+                            <h3 class="product-card__name">Sofá veludo</h3>
+                            <div class="product-card__rating">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <g id="icon/toggle/star_outline_24px">
+                                    <path id="icon/toggle/star_outline_24px_2" fill-rule="evenodd" clip-rule="evenodd" d="M14.8084 8.87458L19.6484 9.29458C20.5284 9.36458 20.8784 10.4646 20.2084 11.0446L16.5384 14.2246L17.6384 18.9546C17.8384 19.8146 16.9084 20.4946 16.1484 20.0346L11.9984 17.5246L7.84836 20.0246C7.08836 20.4846 6.15836 19.8046 6.35836 18.9446L7.45836 14.2246L3.78836 11.0446C3.11836 10.4646 3.47836 9.36458 4.35836 9.29458L9.18836 8.88458L11.0784 4.42458C11.4184 3.61458 12.5784 3.61458 12.9184 4.42458L14.8084 8.87458ZM8.23836 17.9246L11.9984 15.6546L15.7684 17.9346L14.7684 13.6546L18.0884 10.7746L13.7084 10.3946L11.9984 6.35458L10.2984 10.3846L5.91836 10.7646L9.23836 13.6446L8.23836 17.9246Z" fill="#6D7D8B"/>
+                                    </g>
+                                </svg>
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <g id="icon/toggle/star_outline_24px">
+                                    <path id="icon/toggle/star_outline_24px_2" fill-rule="evenodd" clip-rule="evenodd" d="M14.8084 8.87458L19.6484 9.29458C20.5284 9.36458 20.8784 10.4646 20.2084 11.0446L16.5384 14.2246L17.6384 18.9546C17.8384 19.8146 16.9084 20.4946 16.1484 20.0346L11.9984 17.5246L7.84836 20.0246C7.08836 20.4846 6.15836 19.8046 6.35836 18.9446L7.45836 14.2246L3.78836 11.0446C3.11836 10.4646 3.47836 9.36458 4.35836 9.29458L9.18836 8.88458L11.0784 4.42458C11.4184 3.61458 12.5784 3.61458 12.9184 4.42458L14.8084 8.87458ZM8.23836 17.9246L11.9984 15.6546L15.7684 17.9346L14.7684 13.6546L18.0884 10.7746L13.7084 10.3946L11.9984 6.35458L10.2984 10.3846L5.91836 10.7646L9.23836 13.6446L8.23836 17.9246Z" fill="#6D7D8B"/>
+                                    </g>
+                                </svg>
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <g id="icon/toggle/star_outline_24px">
+                                    <path id="icon/toggle/star_outline_24px_2" fill-rule="evenodd" clip-rule="evenodd" d="M14.8084 8.87458L19.6484 9.29458C20.5284 9.36458 20.8784 10.4646 20.2084 11.0446L16.5384 14.2246L17.6384 18.9546C17.8384 19.8146 16.9084 20.4946 16.1484 20.0346L11.9984 17.5246L7.84836 20.0246C7.08836 20.4846 6.15836 19.8046 6.35836 18.9446L7.45836 14.2246L3.78836 11.0446C3.11836 10.4646 3.47836 9.36458 4.35836 9.29458L9.18836 8.88458L11.0784 4.42458C11.4184 3.61458 12.5784 3.61458 12.9184 4.42458L14.8084 8.87458ZM8.23836 17.9246L11.9984 15.6546L15.7684 17.9346L14.7684 13.6546L18.0884 10.7746L13.7084 10.3946L11.9984 6.35458L10.2984 10.3846L5.91836 10.7646L9.23836 13.6446L8.23836 17.9246Z" fill="#6D7D8B"/>
+                                    </g>
+                                </svg>
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <g id="icon/toggle/star_outline_24px">
+                                    <path id="icon/toggle/star_outline_24px_2" fill-rule="evenodd" clip-rule="evenodd" d="M14.8084 8.87458L19.6484 9.29458C20.5284 9.36458 20.8784 10.4646 20.2084 11.0446L16.5384 14.2246L17.6384 18.9546C17.8384 19.8146 16.9084 20.4946 16.1484 20.0346L11.9984 17.5246L7.84836 20.0246C7.08836 20.4846 6.15836 19.8046 6.35836 18.9446L7.45836 14.2246L3.78836 11.0446C3.11836 10.4646 3.47836 9.36458 4.35836 9.29458L9.18836 8.88458L11.0784 4.42458C11.4184 3.61458 12.5784 3.61458 12.9184 4.42458L14.8084 8.87458ZM8.23836 17.9246L11.9984 15.6546L15.7684 17.9346L14.7684 13.6546L18.0884 10.7746L13.7084 10.3946L11.9984 6.35458L10.2984 10.3846L5.91836 10.7646L9.23836 13.6446L8.23836 17.9246Z" fill="#6D7D8B"/>
+                                    </g>
+                                </svg>
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <g id="icon/toggle/star_outline_24px">
+                                    <path id="icon/toggle/star_outline_24px_2" fill-rule="evenodd" clip-rule="evenodd" d="M14.8084 8.87458L19.6484 9.29458C20.5284 9.36458 20.8784 10.4646 20.2084 11.0446L16.5384 14.2246L17.6384 18.9546C17.8384 19.8146 16.9084 20.4946 16.1484 20.0346L11.9984 17.5246L7.84836 20.0246C7.08836 20.4846 6.15836 19.8046 6.35836 18.9446L7.45836 14.2246L3.78836 11.0446C3.11836 10.4646 3.47836 9.36458 4.35836 9.29458L9.18836 8.88458L11.0784 4.42458C11.4184 3.61458 12.5784 3.61458 12.9184 4.42458L14.8084 8.87458ZM8.23836 17.9246L11.9984 15.6546L15.7684 17.9346L14.7684 13.6546L18.0884 10.7746L13.7084 10.3946L11.9984 6.35458L10.2984 10.3846L5.91836 10.7646L9.23836 13.6446L8.23836 17.9246Z" fill="#6D7D8B"/>
+                                    </g>
+                                </svg>
+                            </div>
+                            <p class="product-card__price">16.599 <sup>Mt</sup></p>
+                            <a href="#" class="product-card__btn">Adicionar ao carrinho</a>
+                        </div>
+                    </div>
+                    <div class="slider__item">
+                        <div class="product-card">
+                            <img src="./img/chair-6.jpg" alt="lamp" class="product-card__img">
+                            <h3 class="product-card__name">Cadeira</h3>
+                            <div class="product-card__rating">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <g id="icon/toggle/star_outline_24px">
+                                    <path id="icon/toggle/star_outline_24px_2" fill-rule="evenodd" clip-rule="evenodd" d="M14.8084 8.87458L19.6484 9.29458C20.5284 9.36458 20.8784 10.4646 20.2084 11.0446L16.5384 14.2246L17.6384 18.9546C17.8384 19.8146 16.9084 20.4946 16.1484 20.0346L11.9984 17.5246L7.84836 20.0246C7.08836 20.4846 6.15836 19.8046 6.35836 18.9446L7.45836 14.2246L3.78836 11.0446C3.11836 10.4646 3.47836 9.36458 4.35836 9.29458L9.18836 8.88458L11.0784 4.42458C11.4184 3.61458 12.5784 3.61458 12.9184 4.42458L14.8084 8.87458ZM8.23836 17.9246L11.9984 15.6546L15.7684 17.9346L14.7684 13.6546L18.0884 10.7746L13.7084 10.3946L11.9984 6.35458L10.2984 10.3846L5.91836 10.7646L9.23836 13.6446L8.23836 17.9246Z" fill="#6D7D8B"/>
+                                    </g>
+                                </svg>
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <g id="icon/toggle/star_outline_24px">
+                                    <path id="icon/toggle/star_outline_24px_2" fill-rule="evenodd" clip-rule="evenodd" d="M14.8084 8.87458L19.6484 9.29458C20.5284 9.36458 20.8784 10.4646 20.2084 11.0446L16.5384 14.2246L17.6384 18.9546C17.8384 19.8146 16.9084 20.4946 16.1484 20.0346L11.9984 17.5246L7.84836 20.0246C7.08836 20.4846 6.15836 19.8046 6.35836 18.9446L7.45836 14.2246L3.78836 11.0446C3.11836 10.4646 3.47836 9.36458 4.35836 9.29458L9.18836 8.88458L11.0784 4.42458C11.4184 3.61458 12.5784 3.61458 12.9184 4.42458L14.8084 8.87458ZM8.23836 17.9246L11.9984 15.6546L15.7684 17.9346L14.7684 13.6546L18.0884 10.7746L13.7084 10.3946L11.9984 6.35458L10.2984 10.3846L5.91836 10.7646L9.23836 13.6446L8.23836 17.9246Z" fill="#6D7D8B"/>
+                                    </g>
+                                </svg>
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <g id="icon/toggle/star_outline_24px">
+                                    <path id="icon/toggle/star_outline_24px_2" fill-rule="evenodd" clip-rule="evenodd" d="M14.8084 8.87458L19.6484 9.29458C20.5284 9.36458 20.8784 10.4646 20.2084 11.0446L16.5384 14.2246L17.6384 18.9546C17.8384 19.8146 16.9084 20.4946 16.1484 20.0346L11.9984 17.5246L7.84836 20.0246C7.08836 20.4846 6.15836 19.8046 6.35836 18.9446L7.45836 14.2246L3.78836 11.0446C3.11836 10.4646 3.47836 9.36458 4.35836 9.29458L9.18836 8.88458L11.0784 4.42458C11.4184 3.61458 12.5784 3.61458 12.9184 4.42458L14.8084 8.87458ZM8.23836 17.9246L11.9984 15.6546L15.7684 17.9346L14.7684 13.6546L18.0884 10.7746L13.7084 10.3946L11.9984 6.35458L10.2984 10.3846L5.91836 10.7646L9.23836 13.6446L8.23836 17.9246Z" fill="#6D7D8B"/>
+                                    </g>
+                                </svg>
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <g id="icon/toggle/star_outline_24px">
+                                    <path id="icon/toggle/star_outline_24px_2" fill-rule="evenodd" clip-rule="evenodd" d="M14.8084 8.87458L19.6484 9.29458C20.5284 9.36458 20.8784 10.4646 20.2084 11.0446L16.5384 14.2246L17.6384 18.9546C17.8384 19.8146 16.9084 20.4946 16.1484 20.0346L11.9984 17.5246L7.84836 20.0246C7.08836 20.4846 6.15836 19.8046 6.35836 18.9446L7.45836 14.2246L3.78836 11.0446C3.11836 10.4646 3.47836 9.36458 4.35836 9.29458L9.18836 8.88458L11.0784 4.42458C11.4184 3.61458 12.5784 3.61458 12.9184 4.42458L14.8084 8.87458ZM8.23836 17.9246L11.9984 15.6546L15.7684 17.9346L14.7684 13.6546L18.0884 10.7746L13.7084 10.3946L11.9984 6.35458L10.2984 10.3846L5.91836 10.7646L9.23836 13.6446L8.23836 17.9246Z" fill="#6D7D8B"/>
+                                    </g>
+                                </svg>
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <g id="icon/toggle/star_outline_24px">
+                                    <path id="icon/toggle/star_outline_24px_2" fill-rule="evenodd" clip-rule="evenodd" d="M14.8084 8.87458L19.6484 9.29458C20.5284 9.36458 20.8784 10.4646 20.2084 11.0446L16.5384 14.2246L17.6384 18.9546C17.8384 19.8146 16.9084 20.4946 16.1484 20.0346L11.9984 17.5246L7.84836 20.0246C7.08836 20.4846 6.15836 19.8046 6.35836 18.9446L7.45836 14.2246L3.78836 11.0446C3.11836 10.4646 3.47836 9.36458 4.35836 9.29458L9.18836 8.88458L11.0784 4.42458C11.4184 3.61458 12.5784 3.61458 12.9184 4.42458L14.8084 8.87458ZM8.23836 17.9246L11.9984 15.6546L15.7684 17.9346L14.7684 13.6546L18.0884 10.7746L13.7084 10.3946L11.9984 6.35458L10.2984 10.3846L5.91836 10.7646L9.23836 13.6446L8.23836 17.9246Z" fill="#6D7D8B"/>
+                                    </g>
+                                </svg>
+                            </div>
+                            <p class="product-card__price">13.999 <sup>Mt</sup></p>
+                            <a href="#" class="product-card__btn">Adicionar ao carrinho</a>
+                        </div>
+                    </div>
+                    <div class="slider__item">
+                        <div class="product-card">
+                            <img src="./img/table-1.jpg" alt="lamp" class="product-card__img">
+                            <h3 class="product-card__name">Mesa</h3>
+                            <div class="product-card__rating">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <g id="icon/toggle/star_outline_24px">
+                                    <path id="icon/toggle/star_outline_24px_2" fill-rule="evenodd" clip-rule="evenodd" d="M14.8084 8.87458L19.6484 9.29458C20.5284 9.36458 20.8784 10.4646 20.2084 11.0446L16.5384 14.2246L17.6384 18.9546C17.8384 19.8146 16.9084 20.4946 16.1484 20.0346L11.9984 17.5246L7.84836 20.0246C7.08836 20.4846 6.15836 19.8046 6.35836 18.9446L7.45836 14.2246L3.78836 11.0446C3.11836 10.4646 3.47836 9.36458 4.35836 9.29458L9.18836 8.88458L11.0784 4.42458C11.4184 3.61458 12.5784 3.61458 12.9184 4.42458L14.8084 8.87458ZM8.23836 17.9246L11.9984 15.6546L15.7684 17.9346L14.7684 13.6546L18.0884 10.7746L13.7084 10.3946L11.9984 6.35458L10.2984 10.3846L5.91836 10.7646L9.23836 13.6446L8.23836 17.9246Z" fill="#6D7D8B"/>
+                                    </g>
+                                </svg>
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <g id="icon/toggle/star_outline_24px">
+                                    <path id="icon/toggle/star_outline_24px_2" fill-rule="evenodd" clip-rule="evenodd" d="M14.8084 8.87458L19.6484 9.29458C20.5284 9.36458 20.8784 10.4646 20.2084 11.0446L16.5384 14.2246L17.6384 18.9546C17.8384 19.8146 16.9084 20.4946 16.1484 20.0346L11.9984 17.5246L7.84836 20.0246C7.08836 20.4846 6.15836 19.8046 6.35836 18.9446L7.45836 14.2246L3.78836 11.0446C3.11836 10.4646 3.47836 9.36458 4.35836 9.29458L9.18836 8.88458L11.0784 4.42458C11.4184 3.61458 12.5784 3.61458 12.9184 4.42458L14.8084 8.87458ZM8.23836 17.9246L11.9984 15.6546L15.7684 17.9346L14.7684 13.6546L18.0884 10.7746L13.7084 10.3946L11.9984 6.35458L10.2984 10.3846L5.91836 10.7646L9.23836 13.6446L8.23836 17.9246Z" fill="#6D7D8B"/>
+                                    </g>
+                                </svg>
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <g id="icon/toggle/star_outline_24px">
+                                    <path id="icon/toggle/star_outline_24px_2" fill-rule="evenodd" clip-rule="evenodd" d="M14.8084 8.87458L19.6484 9.29458C20.5284 9.36458 20.8784 10.4646 20.2084 11.0446L16.5384 14.2246L17.6384 18.9546C17.8384 19.8146 16.9084 20.4946 16.1484 20.0346L11.9984 17.5246L7.84836 20.0246C7.08836 20.4846 6.15836 19.8046 6.35836 18.9446L7.45836 14.2246L3.78836 11.0446C3.11836 10.4646 3.47836 9.36458 4.35836 9.29458L9.18836 8.88458L11.0784 4.42458C11.4184 3.61458 12.5784 3.61458 12.9184 4.42458L14.8084 8.87458ZM8.23836 17.9246L11.9984 15.6546L15.7684 17.9346L14.7684 13.6546L18.0884 10.7746L13.7084 10.3946L11.9984 6.35458L10.2984 10.3846L5.91836 10.7646L9.23836 13.6446L8.23836 17.9246Z" fill="#6D7D8B"/>
+                                    </g>
+                                </svg>
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <g id="icon/toggle/star_outline_24px">
+                                    <path id="icon/toggle/star_outline_24px_2" fill-rule="evenodd" clip-rule="evenodd" d="M14.8084 8.87458L19.6484 9.29458C20.5284 9.36458 20.8784 10.4646 20.2084 11.0446L16.5384 14.2246L17.6384 18.9546C17.8384 19.8146 16.9084 20.4946 16.1484 20.0346L11.9984 17.5246L7.84836 20.0246C7.08836 20.4846 6.15836 19.8046 6.35836 18.9446L7.45836 14.2246L3.78836 11.0446C3.11836 10.4646 3.47836 9.36458 4.35836 9.29458L9.18836 8.88458L11.0784 4.42458C11.4184 3.61458 12.5784 3.61458 12.9184 4.42458L14.8084 8.87458ZM8.23836 17.9246L11.9984 15.6546L15.7684 17.9346L14.7684 13.6546L18.0884 10.7746L13.7084 10.3946L11.9984 6.35458L10.2984 10.3846L5.91836 10.7646L9.23836 13.6446L8.23836 17.9246Z" fill="#6D7D8B"/>
+                                    </g>
+                                </svg>
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <g id="icon/toggle/star_outline_24px">
+                                    <path id="icon/toggle/star_outline_24px_2" fill-rule="evenodd" clip-rule="evenodd" d="M14.8084 8.87458L19.6484 9.29458C20.5284 9.36458 20.8784 10.4646 20.2084 11.0446L16.5384 14.2246L17.6384 18.9546C17.8384 19.8146 16.9084 20.4946 16.1484 20.0346L11.9984 17.5246L7.84836 20.0246C7.08836 20.4846 6.15836 19.8046 6.35836 18.9446L7.45836 14.2246L3.78836 11.0446C3.11836 10.4646 3.47836 9.36458 4.35836 9.29458L9.18836 8.88458L11.0784 4.42458C11.4184 3.61458 12.5784 3.61458 12.9184 4.42458L14.8084 8.87458ZM8.23836 17.9246L11.9984 15.6546L15.7684 17.9346L14.7684 13.6546L18.0884 10.7746L13.7084 10.3946L11.9984 6.35458L10.2984 10.3846L5.91836 10.7646L9.23836 13.6446L8.23836 17.9246Z" fill="#6D7D8B"/>
+                                    </g>
+                                </svg>
+                            </div>
+                            <p class="product-card__price">26.399 <sup>Mt</sup></p>
+                            <a href="#" class="product-card__btn">Adicionar ao carrinho</a>
+                        </div>
+                    </div>
+                    <div class="slider__item">
+                        <div class="product-card">
+                            <img src="./img/chair-7.jpg" alt="lamp" class="product-card__img">
+                            <h3 class="product-card__name">Cadeira verde</h3>
+                            <div class="product-card__rating">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <g id="icon/toggle/star_outline_24px">
+                                    <path id="icon/toggle/star_outline_24px_2" fill-rule="evenodd" clip-rule="evenodd" d="M14.8084 8.87458L19.6484 9.29458C20.5284 9.36458 20.8784 10.4646 20.2084 11.0446L16.5384 14.2246L17.6384 18.9546C17.8384 19.8146 16.9084 20.4946 16.1484 20.0346L11.9984 17.5246L7.84836 20.0246C7.08836 20.4846 6.15836 19.8046 6.35836 18.9446L7.45836 14.2246L3.78836 11.0446C3.11836 10.4646 3.47836 9.36458 4.35836 9.29458L9.18836 8.88458L11.0784 4.42458C11.4184 3.61458 12.5784 3.61458 12.9184 4.42458L14.8084 8.87458ZM8.23836 17.9246L11.9984 15.6546L15.7684 17.9346L14.7684 13.6546L18.0884 10.7746L13.7084 10.3946L11.9984 6.35458L10.2984 10.3846L5.91836 10.7646L9.23836 13.6446L8.23836 17.9246Z" fill="#6D7D8B"/>
+                                    </g>
+                                </svg>
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <g id="icon/toggle/star_outline_24px">
+                                    <path id="icon/toggle/star_outline_24px_2" fill-rule="evenodd" clip-rule="evenodd" d="M14.8084 8.87458L19.6484 9.29458C20.5284 9.36458 20.8784 10.4646 20.2084 11.0446L16.5384 14.2246L17.6384 18.9546C17.8384 19.8146 16.9084 20.4946 16.1484 20.0346L11.9984 17.5246L7.84836 20.0246C7.08836 20.4846 6.15836 19.8046 6.35836 18.9446L7.45836 14.2246L3.78836 11.0446C3.11836 10.4646 3.47836 9.36458 4.35836 9.29458L9.18836 8.88458L11.0784 4.42458C11.4184 3.61458 12.5784 3.61458 12.9184 4.42458L14.8084 8.87458ZM8.23836 17.9246L11.9984 15.6546L15.7684 17.9346L14.7684 13.6546L18.0884 10.7746L13.7084 10.3946L11.9984 6.35458L10.2984 10.3846L5.91836 10.7646L9.23836 13.6446L8.23836 17.9246Z" fill="#6D7D8B"/>
+                                    </g>
+                                </svg>
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <g id="icon/toggle/star_outline_24px">
+                                    <path id="icon/toggle/star_outline_24px_2" fill-rule="evenodd" clip-rule="evenodd" d="M14.8084 8.87458L19.6484 9.29458C20.5284 9.36458 20.8784 10.4646 20.2084 11.0446L16.5384 14.2246L17.6384 18.9546C17.8384 19.8146 16.9084 20.4946 16.1484 20.0346L11.9984 17.5246L7.84836 20.0246C7.08836 20.4846 6.15836 19.8046 6.35836 18.9446L7.45836 14.2246L3.78836 11.0446C3.11836 10.4646 3.47836 9.36458 4.35836 9.29458L9.18836 8.88458L11.0784 4.42458C11.4184 3.61458 12.5784 3.61458 12.9184 4.42458L14.8084 8.87458ZM8.23836 17.9246L11.9984 15.6546L15.7684 17.9346L14.7684 13.6546L18.0884 10.7746L13.7084 10.3946L11.9984 6.35458L10.2984 10.3846L5.91836 10.7646L9.23836 13.6446L8.23836 17.9246Z" fill="#6D7D8B"/>
+                                    </g>
+                                </svg>
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <g id="icon/toggle/star_outline_24px">
+                                    <path id="icon/toggle/star_outline_24px_2" fill-rule="evenodd" clip-rule="evenodd" d="M14.8084 8.87458L19.6484 9.29458C20.5284 9.36458 20.8784 10.4646 20.2084 11.0446L16.5384 14.2246L17.6384 18.9546C17.8384 19.8146 16.9084 20.4946 16.1484 20.0346L11.9984 17.5246L7.84836 20.0246C7.08836 20.4846 6.15836 19.8046 6.35836 18.9446L7.45836 14.2246L3.78836 11.0446C3.11836 10.4646 3.47836 9.36458 4.35836 9.29458L9.18836 8.88458L11.0784 4.42458C11.4184 3.61458 12.5784 3.61458 12.9184 4.42458L14.8084 8.87458ZM8.23836 17.9246L11.9984 15.6546L15.7684 17.9346L14.7684 13.6546L18.0884 10.7746L13.7084 10.3946L11.9984 6.35458L10.2984 10.3846L5.91836 10.7646L9.23836 13.6446L8.23836 17.9246Z" fill="#6D7D8B"/>
+                                    </g>
+                                </svg>
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <g id="icon/toggle/star_outline_24px">
+                                    <path id="icon/toggle/star_outline_24px_2" fill-rule="evenodd" clip-rule="evenodd" d="M14.8084 8.87458L19.6484 9.29458C20.5284 9.36458 20.8784 10.4646 20.2084 11.0446L16.5384 14.2246L17.6384 18.9546C17.8384 19.8146 16.9084 20.4946 16.1484 20.0346L11.9984 17.5246L7.84836 20.0246C7.08836 20.4846 6.15836 19.8046 6.35836 18.9446L7.45836 14.2246L3.78836 11.0446C3.11836 10.4646 3.47836 9.36458 4.35836 9.29458L9.18836 8.88458L11.0784 4.42458C11.4184 3.61458 12.5784 3.61458 12.9184 4.42458L14.8084 8.87458ZM8.23836 17.9246L11.9984 15.6546L15.7684 17.9346L14.7684 13.6546L18.0884 10.7746L13.7084 10.3946L11.9984 6.35458L10.2984 10.3846L5.91836 10.7646L9.23836 13.6446L8.23836 17.9246Z" fill="#6D7D8B"/>
+                                    </g>
+                                </svg>
+                            </div>
+                            <p class="product-card__price">9.599 <sup>Mt</sup></p>
+                            <a href="#" class="product-card__btn">Adicionar ao carrinho</a>
+                        </div>
+                    </div>
+                   
+                </div>
+                <span class="prev-1">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g id="icon/navigation/chevron_left_24px">
+                        <path id="icon/navigation/chevron_left_24px_2" d="M15 6.70496C14.8132 6.51771 14.5595 6.41248 14.295 6.41248C14.0305 6.41248 13.7769 6.51771 13.59 6.70496L9.00002 11.295C8.61002 11.685 8.61002 12.315 9.00002 12.705L13.59 17.295C13.98 17.685 14.61 17.685 15 17.295C15.39 16.905 15.39 16.275 15 15.885L11.12 11.995L15 8.11496C15.39 7.72496 15.38 7.08496 15 6.70496Z" fill="#6D7D8B"/>
+                        </g>
+                    </svg>
+                </span>
+                <span class="next-1">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g id="icon/navigation/chevron_right_24px">
+                        <path id="icon/navigation/chevron_right_24px_2" d="M9.00002 6.71063C8.61002 7.10063 8.61002 7.73063 9.00002 8.12063L12.88 12.0006L9.00002 15.8806C8.61002 16.2706 8.61002 16.9006 9.00002 17.2906C9.39002 17.6806 10.02 17.6806 10.41 17.2906L15 12.7006C15.39 12.3106 15.39 11.6806 15 11.2906L10.41 6.70063C10.03 6.32063 9.39002 6.32063 9.00002 6.71063Z" fill="#6D7D8B"/>
+                        </g>
+                    </svg>
+                </span>
+            </div>
+        </section>
+
+        <!-- PROMOTION ITEM -->
+        <section class="promotion-item">
+            <div class="promotion">
+                <div class="promotion__image">
+                    <div class="promotion__time">
+                        <span class="promotion__time-item">10 dias</span>
+                        <span class="promotion__time-item">5 horas</span>
+                        <span class="promotion__time-item">45 min</span>
+                        <span class="promotion__time-item">33 seg</span>
+                    </div>
+                    <div class="promotion__img">
+                        <img src="./img/sfbg.jpg" alt="sofa">
+                    </div>
+                </div>
+
+                <div class="promotion__text">
+                    <h2 class="promotion__name">Sofá Veludo castanho</h2>
+                    <p class="promotion__description">Lorem ipsum dolor sit amet consectetur
+                         adipisicing elit. Reprehenderit similique temporibus debitis dolorem rem. Totam itaque mollitia vitae dolores quibusdam ipsum obcaecati, 
+                        repellat libero consequatur autem deleniti odit ab corporis.
+                    </p>
+                    <div class="promotion__rating">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g id="icon/toggle/star_24px">
+                            <path id="icon/toggle/star_24px_2" d="M11.9998 17.5196L16.1498 20.0296C16.9098 20.4896 17.8398 19.8096 17.6398 18.9496L16.5398 14.2296L20.2098 11.0496C20.8798 10.4696 20.5198 9.36958 19.6398 9.29958L14.8098 8.88958L12.9198 4.42958C12.5798 3.61958 11.4198 3.61958 11.0798 4.42958L9.18983 8.87958L4.35983 9.28958C3.47983 9.35958 3.11983 10.4596 3.78983 11.0396L7.45983 14.2196L6.35983 18.9396C6.15983 19.7996 7.08983 20.4796 7.84983 20.0196L11.9998 17.5196V17.5196Z" fill="#1abc9c"/>
+                            </g>
+                        </svg>
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g id="icon/toggle/star_24px">
+                            <path id="icon/toggle/star_24px_2" d="M11.9998 17.5196L16.1498 20.0296C16.9098 20.4896 17.8398 19.8096 17.6398 18.9496L16.5398 14.2296L20.2098 11.0496C20.8798 10.4696 20.5198 9.36958 19.6398 9.29958L14.8098 8.88958L12.9198 4.42958C12.5798 3.61958 11.4198 3.61958 11.0798 4.42958L9.18983 8.87958L4.35983 9.28958C3.47983 9.35958 3.11983 10.4596 3.78983 11.0396L7.45983 14.2196L6.35983 18.9396C6.15983 19.7996 7.08983 20.4796 7.84983 20.0196L11.9998 17.5196V17.5196Z" fill="#1abc9c"/>
+                            </g>
+                        </svg>
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g id="icon/toggle/star_24px">
+                            <path id="icon/toggle/star_24px_2" d="M11.9998 17.5196L16.1498 20.0296C16.9098 20.4896 17.8398 19.8096 17.6398 18.9496L16.5398 14.2296L20.2098 11.0496C20.8798 10.4696 20.5198 9.36958 19.6398 9.29958L14.8098 8.88958L12.9198 4.42958C12.5798 3.61958 11.4198 3.61958 11.0798 4.42958L9.18983 8.87958L4.35983 9.28958C3.47983 9.35958 3.11983 10.4596 3.78983 11.0396L7.45983 14.2196L6.35983 18.9396C6.15983 19.7996 7.08983 20.4796 7.84983 20.0196L11.9998 17.5196V17.5196Z" fill="#1abc9c"/>
+                            </g>
+                        </svg>
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g id="icon/toggle/star_24px">
+                            <path id="icon/toggle/star_24px_2" d="M11.9998 17.5196L16.1498 20.0296C16.9098 20.4896 17.8398 19.8096 17.6398 18.9496L16.5398 14.2296L20.2098 11.0496C20.8798 10.4696 20.5198 9.36958 19.6398 9.29958L14.8098 8.88958L12.9198 4.42958C12.5798 3.61958 11.4198 3.61958 11.0798 4.42958L9.18983 8.87958L4.35983 9.28958C3.47983 9.35958 3.11983 10.4596 3.78983 11.0396L7.45983 14.2196L6.35983 18.9396C6.15983 19.7996 7.08983 20.4796 7.84983 20.0196L11.9998 17.5196V17.5196Z" fill="#1abc9c"/>
+                            </g>
+                        </svg>
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g id="icon/toggle/star_24px">
+                            <path id="icon/toggle/star_24px_2" d="M11.9998 17.5196L16.1498 20.0296C16.9098 20.4896 17.8398 19.8096 17.6398 18.9496L16.5398 14.2296L20.2098 11.0496C20.8798 10.4696 20.5198 9.36958 19.6398 9.29958L14.8098 8.88958L12.9198 4.42958C12.5798 3.61958 11.4198 3.61958 11.0798 4.42958L9.18983 8.87958L4.35983 9.28958C3.47983 9.35958 3.11983 10.4596 3.78983 11.0396L7.45983 14.2196L6.35983 18.9396C6.15983 19.7996 7.08983 20.4796 7.84983 20.0196L11.9998 17.5196V17.5196Z" fill="#1abc9c"/>
+                            </g>
+                        </svg>
+                    </div>
+                    <p class="promotion__price">48.699 <sup>MT</sup></p>
+
+                    <a href="#" class="promotion__btn">Adicionar ao carrinho</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="showcase-section">
+            <div class="showcase">
+                <h2 class="showcase__title">Produtos novos</h2>
+                <div class="showcase__item">
+                    <div class="showcase__img">
+                        <img src="./img/lamp-1.jpg" alt="lampada">
+                    </div>
+                    <div class="showcase__text">
+                        <h3 class="showcase__name">Lampada branca</h3>
+                        <div class="showcase__rating">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <g id="icon/toggle/star_24px">
+                                <path id="icon/toggle/star_24px_2" d="M11.9998 17.5196L16.1498 20.0296C16.9098 20.4896 17.8398 19.8096 17.6398 18.9496L16.5398 14.2296L20.2098 11.0496C20.8798 10.4696 20.5198 9.36958 19.6398 9.29958L14.8098 8.88958L12.9198 4.42958C12.5798 3.61958 11.4198 3.61958 11.0798 4.42958L9.18983 8.87958L4.35983 9.28958C3.47983 9.35958 3.11983 10.4596 3.78983 11.0396L7.45983 14.2196L6.35983 18.9396C6.15983 19.7996 7.08983 20.4796 7.84983 20.0196L11.9998 17.5196V17.5196Z" fill="#1abc9c"/>
+                                </g>
+                            </svg>
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <g id="icon/toggle/star_24px">
+                                <path id="icon/toggle/star_24px_2" d="M11.9998 17.5196L16.1498 20.0296C16.9098 20.4896 17.8398 19.8096 17.6398 18.9496L16.5398 14.2296L20.2098 11.0496C20.8798 10.4696 20.5198 9.36958 19.6398 9.29958L14.8098 8.88958L12.9198 4.42958C12.5798 3.61958 11.4198 3.61958 11.0798 4.42958L9.18983 8.87958L4.35983 9.28958C3.47983 9.35958 3.11983 10.4596 3.78983 11.0396L7.45983 14.2196L6.35983 18.9396C6.15983 19.7996 7.08983 20.4796 7.84983 20.0196L11.9998 17.5196V17.5196Z" fill="#1abc9c"/>
+                                </g>
+                            </svg>
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <g id="icon/toggle/star_24px">
+                                <path id="icon/toggle/star_24px_2" d="M11.9998 17.5196L16.1498 20.0296C16.9098 20.4896 17.8398 19.8096 17.6398 18.9496L16.5398 14.2296L20.2098 11.0496C20.8798 10.4696 20.5198 9.36958 19.6398 9.29958L14.8098 8.88958L12.9198 4.42958C12.5798 3.61958 11.4198 3.61958 11.0798 4.42958L9.18983 8.87958L4.35983 9.28958C3.47983 9.35958 3.11983 10.4596 3.78983 11.0396L7.45983 14.2196L6.35983 18.9396C6.15983 19.7996 7.08983 20.4796 7.84983 20.0196L11.9998 17.5196V17.5196Z" fill="#1abc9c"/>
+                                </g>
+                            </svg>
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <g id="icon/toggle/star_24px">
+                                <path id="icon/toggle/star_24px_2" d="M11.9998 17.5196L16.1498 20.0296C16.9098 20.4896 17.8398 19.8096 17.6398 18.9496L16.5398 14.2296L20.2098 11.0496C20.8798 10.4696 20.5198 9.36958 19.6398 9.29958L14.8098 8.88958L12.9198 4.42958C12.5798 3.61958 11.4198 3.61958 11.0798 4.42958L9.18983 8.87958L4.35983 9.28958C3.47983 9.35958 3.11983 10.4596 3.78983 11.0396L7.45983 14.2196L6.35983 18.9396C6.15983 19.7996 7.08983 20.4796 7.84983 20.0196L11.9998 17.5196V17.5196Z" fill="#1abc9c"/>
+                                </g>
+                            </svg>
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <g id="icon/toggle/star_24px">
+                                <path id="icon/toggle/star_24px_2" d="M11.9998 17.5196L16.1498 20.0296C16.9098 20.4896 17.8398 19.8096 17.6398 18.9496L16.5398 14.2296L20.2098 11.0496C20.8798 10.4696 20.5198 9.36958 19.6398 9.29958L14.8098 8.88958L12.9198 4.42958C12.5798 3.61958 11.4198 3.61958 11.0798 4.42958L9.18983 8.87958L4.35983 9.28958C3.47983 9.35958 3.11983 10.4596 3.78983 11.0396L7.45983 14.2196L6.35983 18.9396C6.15983 19.7996 7.08983 20.4796 7.84983 20.0196L11.9998 17.5196V17.5196Z" fill="#1abc9c"/>
+                                </g>
+                            </svg>
+                        </div>
+                        <p class="showcase__price">MZN8.700 </p>
+                        <p class="showcase__promo">MZN 6.500</>
+                    </div>
+                </div>
+                <div class="showcase__item">
+                    <div class="showcase__img">
+                        <img src="./img/table-1.jpg" alt="mesa">
+                    </div>
+                    <div class="showcase__text">
+                        <h3 class="showcase__name">Mesa</h3>
+                        <div class="showcase__rating">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <g id="icon/toggle/star_24px">
+                                <path id="icon/toggle/star_24px_2" d="M11.9998 17.5196L16.1498 20.0296C16.9098 20.4896 17.8398 19.8096 17.6398 18.9496L16.5398 14.2296L20.2098 11.0496C20.8798 10.4696 20.5198 9.36958 19.6398 9.29958L14.8098 8.88958L12.9198 4.42958C12.5798 3.61958 11.4198 3.61958 11.0798 4.42958L9.18983 8.87958L4.35983 9.28958C3.47983 9.35958 3.11983 10.4596 3.78983 11.0396L7.45983 14.2196L6.35983 18.9396C6.15983 19.7996 7.08983 20.4796 7.84983 20.0196L11.9998 17.5196V17.5196Z" fill="#1abc9c"/>
+                                </g>
+                            </svg>
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <g id="icon/toggle/star_24px">
+                                <path id="icon/toggle/star_24px_2" d="M11.9998 17.5196L16.1498 20.0296C16.9098 20.4896 17.8398 19.8096 17.6398 18.9496L16.5398 14.2296L20.2098 11.0496C20.8798 10.4696 20.5198 9.36958 19.6398 9.29958L14.8098 8.88958L12.9198 4.42958C12.5798 3.61958 11.4198 3.61958 11.0798 4.42958L9.18983 8.87958L4.35983 9.28958C3.47983 9.35958 3.11983 10.4596 3.78983 11.0396L7.45983 14.2196L6.35983 18.9396C6.15983 19.7996 7.08983 20.4796 7.84983 20.0196L11.9998 17.5196V17.5196Z" fill="#1abc9c"/>
+                                </g>
+                            </svg>
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <g id="icon/toggle/star_24px">
+                                <path id="icon/toggle/star_24px_2" d="M11.9998 17.5196L16.1498 20.0296C16.9098 20.4896 17.8398 19.8096 17.6398 18.9496L16.5398 14.2296L20.2098 11.0496C20.8798 10.4696 20.5198 9.36958 19.6398 9.29958L14.8098 8.88958L12.9198 4.42958C12.5798 3.61958 11.4198 3.61958 11.0798 4.42958L9.18983 8.87958L4.35983 9.28958C3.47983 9.35958 3.11983 10.4596 3.78983 11.0396L7.45983 14.2196L6.35983 18.9396C6.15983 19.7996 7.08983 20.4796 7.84983 20.0196L11.9998 17.5196V17.5196Z" fill="#1abc9c"/>
+                                </g>
+                            </svg>
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <g id="icon/toggle/star_24px">
+                                <path id="icon/toggle/star_24px_2" d="M11.9998 17.5196L16.1498 20.0296C16.9098 20.4896 17.8398 19.8096 17.6398 18.9496L16.5398 14.2296L20.2098 11.0496C20.8798 10.4696 20.5198 9.36958 19.6398 9.29958L14.8098 8.88958L12.9198 4.42958C12.5798 3.61958 11.4198 3.61958 11.0798 4.42958L9.18983 8.87958L4.35983 9.28958C3.47983 9.35958 3.11983 10.4596 3.78983 11.0396L7.45983 14.2196L6.35983 18.9396C6.15983 19.7996 7.08983 20.4796 7.84983 20.0196L11.9998 17.5196V17.5196Z" fill="#1abc9c"/>
+                                </g>
+                            </svg>
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <g id="icon/toggle/star_24px">
+                                <path id="icon/toggle/star_24px_2" d="M11.9998 17.5196L16.1498 20.0296C16.9098 20.4896 17.8398 19.8096 17.6398 18.9496L16.5398 14.2296L20.2098 11.0496C20.8798 10.4696 20.5198 9.36958 19.6398 9.29958L14.8098 8.88958L12.9198 4.42958C12.5798 3.61958 11.4198 3.61958 11.0798 4.42958L9.18983 8.87958L4.35983 9.28958C3.47983 9.35958 3.11983 10.4596 3.78983 11.0396L7.45983 14.2196L6.35983 18.9396C6.15983 19.7996 7.08983 20.4796 7.84983 20.0196L11.9998 17.5196V17.5196Z" fill="#1abc9c"/>
+                                </g>
+                            </svg>
+                        </div>
+                        <p class="showcase__price">MZN8.700 </p>
+                        <p class="showcase__promo">MZN 6.500</>
+                    </div>
+                </div>
+                <div class="showcase__item">
+                    <div class="showcase__img">
+                        <img src="./img/lamp.jpg" alt="lampada">
+                    </div>
+                    <div class="showcase__text">
+                        <h3 class="showcase__name">Lampada de cristal</h3>
+                        <div class="showcase__rating">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <g id="icon/toggle/star_24px">
+                                <path id="icon/toggle/star_24px_2" d="M11.9998 17.5196L16.1498 20.0296C16.9098 20.4896 17.8398 19.8096 17.6398 18.9496L16.5398 14.2296L20.2098 11.0496C20.8798 10.4696 20.5198 9.36958 19.6398 9.29958L14.8098 8.88958L12.9198 4.42958C12.5798 3.61958 11.4198 3.61958 11.0798 4.42958L9.18983 8.87958L4.35983 9.28958C3.47983 9.35958 3.11983 10.4596 3.78983 11.0396L7.45983 14.2196L6.35983 18.9396C6.15983 19.7996 7.08983 20.4796 7.84983 20.0196L11.9998 17.5196V17.5196Z" fill="#1abc9c"/>
+                                </g>
+                            </svg>
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <g id="icon/toggle/star_24px">
+                                <path id="icon/toggle/star_24px_2" d="M11.9998 17.5196L16.1498 20.0296C16.9098 20.4896 17.8398 19.8096 17.6398 18.9496L16.5398 14.2296L20.2098 11.0496C20.8798 10.4696 20.5198 9.36958 19.6398 9.29958L14.8098 8.88958L12.9198 4.42958C12.5798 3.61958 11.4198 3.61958 11.0798 4.42958L9.18983 8.87958L4.35983 9.28958C3.47983 9.35958 3.11983 10.4596 3.78983 11.0396L7.45983 14.2196L6.35983 18.9396C6.15983 19.7996 7.08983 20.4796 7.84983 20.0196L11.9998 17.5196V17.5196Z" fill="#1abc9c"/>
+                                </g>
+                            </svg>
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <g id="icon/toggle/star_24px">
+                                <path id="icon/toggle/star_24px_2" d="M11.9998 17.5196L16.1498 20.0296C16.9098 20.4896 17.8398 19.8096 17.6398 18.9496L16.5398 14.2296L20.2098 11.0496C20.8798 10.4696 20.5198 9.36958 19.6398 9.29958L14.8098 8.88958L12.9198 4.42958C12.5798 3.61958 11.4198 3.61958 11.0798 4.42958L9.18983 8.87958L4.35983 9.28958C3.47983 9.35958 3.11983 10.4596 3.78983 11.0396L7.45983 14.2196L6.35983 18.9396C6.15983 19.7996 7.08983 20.4796 7.84983 20.0196L11.9998 17.5196V17.5196Z" fill="#1abc9c"/>
+                                </g>
+                            </svg>
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <g id="icon/toggle/star_24px">
+                                <path id="icon/toggle/star_24px_2" d="M11.9998 17.5196L16.1498 20.0296C16.9098 20.4896 17.8398 19.8096 17.6398 18.9496L16.5398 14.2296L20.2098 11.0496C20.8798 10.4696 20.5198 9.36958 19.6398 9.29958L14.8098 8.88958L12.9198 4.42958C12.5798 3.61958 11.4198 3.61958 11.0798 4.42958L9.18983 8.87958L4.35983 9.28958C3.47983 9.35958 3.11983 10.4596 3.78983 11.0396L7.45983 14.2196L6.35983 18.9396C6.15983 19.7996 7.08983 20.4796 7.84983 20.0196L11.9998 17.5196V17.5196Z" fill="#1abc9c"/>
+                                </g>
+                            </svg>
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <g id="icon/toggle/star_24px">
+                                <path id="icon/toggle/star_24px_2" d="M11.9998 17.5196L16.1498 20.0296C16.9098 20.4896 17.8398 19.8096 17.6398 18.9496L16.5398 14.2296L20.2098 11.0496C20.8798 10.4696 20.5198 9.36958 19.6398 9.29958L14.8098 8.88958L12.9198 4.42958C12.5798 3.61958 11.4198 3.61958 11.0798 4.42958L9.18983 8.87958L4.35983 9.28958C3.47983 9.35958 3.11983 10.4596 3.78983 11.0396L7.45983 14.2196L6.35983 18.9396C6.15983 19.7996 7.08983 20.4796 7.84983 20.0196L11.9998 17.5196V17.5196Z" fill="#1abc9c"/>
+                                </g>
+                            </svg>
+                        </div>
+                        <p class="showcase__price">MZN10.700 </p>
+                        <p class="showcase__promo">MZN 8.500</>
+                    </div>
+                </div>
+                <div class="showcase__item">
+                    <div class="showcase__img">
+                        <img src="./img/chair-6.jpg" alt="cadeira">
+                    </div>
+                    <div class="showcase__text">
+                        <h3 class="showcase__name">Cadeira azul</h3>
+                        <div class="showcase__rating">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <g id="icon/toggle/star_24px">
+                                <path id="icon/toggle/star_24px_2" d="M11.9998 17.5196L16.1498 20.0296C16.9098 20.4896 17.8398 19.8096 17.6398 18.9496L16.5398 14.2296L20.2098 11.0496C20.8798 10.4696 20.5198 9.36958 19.6398 9.29958L14.8098 8.88958L12.9198 4.42958C12.5798 3.61958 11.4198 3.61958 11.0798 4.42958L9.18983 8.87958L4.35983 9.28958C3.47983 9.35958 3.11983 10.4596 3.78983 11.0396L7.45983 14.2196L6.35983 18.9396C6.15983 19.7996 7.08983 20.4796 7.84983 20.0196L11.9998 17.5196V17.5196Z" fill="#1abc9c"/>
+                                </g>
+                            </svg>
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <g id="icon/toggle/star_24px">
+                                <path id="icon/toggle/star_24px_2" d="M11.9998 17.5196L16.1498 20.0296C16.9098 20.4896 17.8398 19.8096 17.6398 18.9496L16.5398 14.2296L20.2098 11.0496C20.8798 10.4696 20.5198 9.36958 19.6398 9.29958L14.8098 8.88958L12.9198 4.42958C12.5798 3.61958 11.4198 3.61958 11.0798 4.42958L9.18983 8.87958L4.35983 9.28958C3.47983 9.35958 3.11983 10.4596 3.78983 11.0396L7.45983 14.2196L6.35983 18.9396C6.15983 19.7996 7.08983 20.4796 7.84983 20.0196L11.9998 17.5196V17.5196Z" fill="#1abc9c"/>
+                                </g>
+                            </svg>
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <g id="icon/toggle/star_24px">
+                                <path id="icon/toggle/star_24px_2" d="M11.9998 17.5196L16.1498 20.0296C16.9098 20.4896 17.8398 19.8096 17.6398 18.9496L16.5398 14.2296L20.2098 11.0496C20.8798 10.4696 20.5198 9.36958 19.6398 9.29958L14.8098 8.88958L12.9198 4.42958C12.5798 3.61958 11.4198 3.61958 11.0798 4.42958L9.18983 8.87958L4.35983 9.28958C3.47983 9.35958 3.11983 10.4596 3.78983 11.0396L7.45983 14.2196L6.35983 18.9396C6.15983 19.7996 7.08983 20.4796 7.84983 20.0196L11.9998 17.5196V17.5196Z" fill="#1abc9c"/>
+                                </g>
+                            </svg>
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <g id="icon/toggle/star_24px">
+                                <path id="icon/toggle/star_24px_2" d="M11.9998 17.5196L16.1498 20.0296C16.9098 20.4896 17.8398 19.8096 17.6398 18.9496L16.5398 14.2296L20.2098 11.0496C20.8798 10.4696 20.5198 9.36958 19.6398 9.29958L14.8098 8.88958L12.9198 4.42958C12.5798 3.61958 11.4198 3.61958 11.0798 4.42958L9.18983 8.87958L4.35983 9.28958C3.47983 9.35958 3.11983 10.4596 3.78983 11.0396L7.45983 14.2196L6.35983 18.9396C6.15983 19.7996 7.08983 20.4796 7.84983 20.0196L11.9998 17.5196V17.5196Z" fill="#1abc9c"/>
+                                </g>
+                            </svg>
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <g id="icon/toggle/star_24px">
+                                <path id="icon/toggle/star_24px_2" d="M11.9998 17.5196L16.1498 20.0296C16.9098 20.4896 17.8398 19.8096 17.6398 18.9496L16.5398 14.2296L20.2098 11.0496C20.8798 10.4696 20.5198 9.36958 19.6398 9.29958L14.8098 8.88958L12.9198 4.42958C12.5798 3.61958 11.4198 3.61958 11.0798 4.42958L9.18983 8.87958L4.35983 9.28958C3.47983 9.35958 3.11983 10.4596 3.78983 11.0396L7.45983 14.2196L6.35983 18.9396C6.15983 19.7996 7.08983 20.4796 7.84983 20.0196L11.9998 17.5196V17.5196Z" fill="#1abc9c"/>
+                                </g>
+                            </svg>
+                        </div>
+                        <p class="showcase__price">MZN7.700 </p>
+                        <p class="showcase__promo">MZN 4.999</>
+                    </div>
+                </div>
+                
+               
+            </div>
+            <div class="showcase">
+                <h2 class="showcase__title">Mais vendidos</h2>
+                <div class="showcase__item">
+                    <div class="showcase__img">
+                        <img src="./img/chair-6.jpg" alt="lampada">
+                    </div>
+                    <div class="showcase__text">
+                        <h3 class="showcase__name">Cadeira azul</h3>
+                        <div class="showcase__rating">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <g id="icon/toggle/star_24px">
+                                <path id="icon/toggle/star_24px_2" d="M11.9998 17.5196L16.1498 20.0296C16.9098 20.4896 17.8398 19.8096 17.6398 18.9496L16.5398 14.2296L20.2098 11.0496C20.8798 10.4696 20.5198 9.36958 19.6398 9.29958L14.8098 8.88958L12.9198 4.42958C12.5798 3.61958 11.4198 3.61958 11.0798 4.42958L9.18983 8.87958L4.35983 9.28958C3.47983 9.35958 3.11983 10.4596 3.78983 11.0396L7.45983 14.2196L6.35983 18.9396C6.15983 19.7996 7.08983 20.4796 7.84983 20.0196L11.9998 17.5196V17.5196Z" fill="#1abc9c"/>
+                                </g>
+                            </svg>
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <g id="icon/toggle/star_24px">
+                                <path id="icon/toggle/star_24px_2" d="M11.9998 17.5196L16.1498 20.0296C16.9098 20.4896 17.8398 19.8096 17.6398 18.9496L16.5398 14.2296L20.2098 11.0496C20.8798 10.4696 20.5198 9.36958 19.6398 9.29958L14.8098 8.88958L12.9198 4.42958C12.5798 3.61958 11.4198 3.61958 11.0798 4.42958L9.18983 8.87958L4.35983 9.28958C3.47983 9.35958 3.11983 10.4596 3.78983 11.0396L7.45983 14.2196L6.35983 18.9396C6.15983 19.7996 7.08983 20.4796 7.84983 20.0196L11.9998 17.5196V17.5196Z" fill="#1abc9c"/>
+                                </g>
+                            </svg>
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <g id="icon/toggle/star_24px">
+                                <path id="icon/toggle/star_24px_2" d="M11.9998 17.5196L16.1498 20.0296C16.9098 20.4896 17.8398 19.8096 17.6398 18.9496L16.5398 14.2296L20.2098 11.0496C20.8798 10.4696 20.5198 9.36958 19.6398 9.29958L14.8098 8.88958L12.9198 4.42958C12.5798 3.61958 11.4198 3.61958 11.0798 4.42958L9.18983 8.87958L4.35983 9.28958C3.47983 9.35958 3.11983 10.4596 3.78983 11.0396L7.45983 14.2196L6.35983 18.9396C6.15983 19.7996 7.08983 20.4796 7.84983 20.0196L11.9998 17.5196V17.5196Z" fill="#1abc9c"/>
+                                </g>
+                            </svg>
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <g id="icon/toggle/star_24px">
+                                <path id="icon/toggle/star_24px_2" d="M11.9998 17.5196L16.1498 20.0296C16.9098 20.4896 17.8398 19.8096 17.6398 18.9496L16.5398 14.2296L20.2098 11.0496C20.8798 10.4696 20.5198 9.36958 19.6398 9.29958L14.8098 8.88958L12.9198 4.42958C12.5798 3.61958 11.4198 3.61958 11.0798 4.42958L9.18983 8.87958L4.35983 9.28958C3.47983 9.35958 3.11983 10.4596 3.78983 11.0396L7.45983 14.2196L6.35983 18.9396C6.15983 19.7996 7.08983 20.4796 7.84983 20.0196L11.9998 17.5196V17.5196Z" fill="#1abc9c"/>
+                                </g>
+                            </svg>
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <g id="icon/toggle/star_24px">
+                                <path id="icon/toggle/star_24px_2" d="M11.9998 17.5196L16.1498 20.0296C16.9098 20.4896 17.8398 19.8096 17.6398 18.9496L16.5398 14.2296L20.2098 11.0496C20.8798 10.4696 20.5198 9.36958 19.6398 9.29958L14.8098 8.88958L12.9198 4.42958C12.5798 3.61958 11.4198 3.61958 11.0798 4.42958L9.18983 8.87958L4.35983 9.28958C3.47983 9.35958 3.11983 10.4596 3.78983 11.0396L7.45983 14.2196L6.35983 18.9396C6.15983 19.7996 7.08983 20.4796 7.84983 20.0196L11.9998 17.5196V17.5196Z" fill="#1abc9c"/>
+                                </g>
+                            </svg>
+                        </div>
+                        <p class="showcase__price">MZN7.700 </p>
+                        <p class="showcase__promo">MZN 4.499</>
+                    </div>
+                </div>
+                <div class="showcase__item">
+                    <div class="showcase__img">
+                        <img src="./img/sofa-1.jpg" alt="sofa">
+                    </div>
+                    <div class="showcase__text">
+                        <h3 class="showcase__name">Sofá veludo</h3>
+                        <div class="showcase__rating">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <g id="icon/toggle/star_24px">
+                                <path id="icon/toggle/star_24px_2" d="M11.9998 17.5196L16.1498 20.0296C16.9098 20.4896 17.8398 19.8096 17.6398 18.9496L16.5398 14.2296L20.2098 11.0496C20.8798 10.4696 20.5198 9.36958 19.6398 9.29958L14.8098 8.88958L12.9198 4.42958C12.5798 3.61958 11.4198 3.61958 11.0798 4.42958L9.18983 8.87958L4.35983 9.28958C3.47983 9.35958 3.11983 10.4596 3.78983 11.0396L7.45983 14.2196L6.35983 18.9396C6.15983 19.7996 7.08983 20.4796 7.84983 20.0196L11.9998 17.5196V17.5196Z" fill="#1abc9c"/>
+                                </g>
+                            </svg>
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <g id="icon/toggle/star_24px">
+                                <path id="icon/toggle/star_24px_2" d="M11.9998 17.5196L16.1498 20.0296C16.9098 20.4896 17.8398 19.8096 17.6398 18.9496L16.5398 14.2296L20.2098 11.0496C20.8798 10.4696 20.5198 9.36958 19.6398 9.29958L14.8098 8.88958L12.9198 4.42958C12.5798 3.61958 11.4198 3.61958 11.0798 4.42958L9.18983 8.87958L4.35983 9.28958C3.47983 9.35958 3.11983 10.4596 3.78983 11.0396L7.45983 14.2196L6.35983 18.9396C6.15983 19.7996 7.08983 20.4796 7.84983 20.0196L11.9998 17.5196V17.5196Z" fill="#1abc9c"/>
+                                </g>
+                            </svg>
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <g id="icon/toggle/star_24px">
+                                <path id="icon/toggle/star_24px_2" d="M11.9998 17.5196L16.1498 20.0296C16.9098 20.4896 17.8398 19.8096 17.6398 18.9496L16.5398 14.2296L20.2098 11.0496C20.8798 10.4696 20.5198 9.36958 19.6398 9.29958L14.8098 8.88958L12.9198 4.42958C12.5798 3.61958 11.4198 3.61958 11.0798 4.42958L9.18983 8.87958L4.35983 9.28958C3.47983 9.35958 3.11983 10.4596 3.78983 11.0396L7.45983 14.2196L6.35983 18.9396C6.15983 19.7996 7.08983 20.4796 7.84983 20.0196L11.9998 17.5196V17.5196Z" fill="#1abc9c"/>
+                                </g>
+                            </svg>
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <g id="icon/toggle/star_24px">
+                                <path id="icon/toggle/star_24px_2" d="M11.9998 17.5196L16.1498 20.0296C16.9098 20.4896 17.8398 19.8096 17.6398 18.9496L16.5398 14.2296L20.2098 11.0496C20.8798 10.4696 20.5198 9.36958 19.6398 9.29958L14.8098 8.88958L12.9198 4.42958C12.5798 3.61958 11.4198 3.61958 11.0798 4.42958L9.18983 8.87958L4.35983 9.28958C3.47983 9.35958 3.11983 10.4596 3.78983 11.0396L7.45983 14.2196L6.35983 18.9396C6.15983 19.7996 7.08983 20.4796 7.84983 20.0196L11.9998 17.5196V17.5196Z" fill="#1abc9c"/>
+                                </g>
+                            </svg>
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <g id="icon/toggle/star_24px">
+                                <path id="icon/toggle/star_24px_2" d="M11.9998 17.5196L16.1498 20.0296C16.9098 20.4896 17.8398 19.8096 17.6398 18.9496L16.5398 14.2296L20.2098 11.0496C20.8798 10.4696 20.5198 9.36958 19.6398 9.29958L14.8098 8.88958L12.9198 4.42958C12.5798 3.61958 11.4198 3.61958 11.0798 4.42958L9.18983 8.87958L4.35983 9.28958C3.47983 9.35958 3.11983 10.4596 3.78983 11.0396L7.45983 14.2196L6.35983 18.9396C6.15983 19.7996 7.08983 20.4796 7.84983 20.0196L11.9998 17.5196V17.5196Z" fill="#1abc9c"/>
+                                </g>
+                            </svg>
+                        </div>
+                        <p class="showcase__price">MZN39.700 </p>
+                        <p class="showcase__promo">MZN 37.500</>
+                    </div>
+                </div>
+                <div class="showcase__item">
+                    <div class="showcase__img">
+                        <img src="./img/chair-7.jpg" alt="lampada">
+                    </div>
+                    <div class="showcase__text">
+                        <h3 class="showcase__name">Cadeira verde</h3>
+                        <div class="showcase__rating">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <g id="icon/toggle/star_24px">
+                                <path id="icon/toggle/star_24px_2" d="M11.9998 17.5196L16.1498 20.0296C16.9098 20.4896 17.8398 19.8096 17.6398 18.9496L16.5398 14.2296L20.2098 11.0496C20.8798 10.4696 20.5198 9.36958 19.6398 9.29958L14.8098 8.88958L12.9198 4.42958C12.5798 3.61958 11.4198 3.61958 11.0798 4.42958L9.18983 8.87958L4.35983 9.28958C3.47983 9.35958 3.11983 10.4596 3.78983 11.0396L7.45983 14.2196L6.35983 18.9396C6.15983 19.7996 7.08983 20.4796 7.84983 20.0196L11.9998 17.5196V17.5196Z" fill="#1abc9c"/>
+                                </g>
+                            </svg>
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <g id="icon/toggle/star_24px">
+                                <path id="icon/toggle/star_24px_2" d="M11.9998 17.5196L16.1498 20.0296C16.9098 20.4896 17.8398 19.8096 17.6398 18.9496L16.5398 14.2296L20.2098 11.0496C20.8798 10.4696 20.5198 9.36958 19.6398 9.29958L14.8098 8.88958L12.9198 4.42958C12.5798 3.61958 11.4198 3.61958 11.0798 4.42958L9.18983 8.87958L4.35983 9.28958C3.47983 9.35958 3.11983 10.4596 3.78983 11.0396L7.45983 14.2196L6.35983 18.9396C6.15983 19.7996 7.08983 20.4796 7.84983 20.0196L11.9998 17.5196V17.5196Z" fill="#1abc9c"/>
+                                </g>
+                            </svg>
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <g id="icon/toggle/star_24px">
+                                <path id="icon/toggle/star_24px_2" d="M11.9998 17.5196L16.1498 20.0296C16.9098 20.4896 17.8398 19.8096 17.6398 18.9496L16.5398 14.2296L20.2098 11.0496C20.8798 10.4696 20.5198 9.36958 19.6398 9.29958L14.8098 8.88958L12.9198 4.42958C12.5798 3.61958 11.4198 3.61958 11.0798 4.42958L9.18983 8.87958L4.35983 9.28958C3.47983 9.35958 3.11983 10.4596 3.78983 11.0396L7.45983 14.2196L6.35983 18.9396C6.15983 19.7996 7.08983 20.4796 7.84983 20.0196L11.9998 17.5196V17.5196Z" fill="#1abc9c"/>
+                                </g>
+                            </svg>
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <g id="icon/toggle/star_24px">
+                                <path id="icon/toggle/star_24px_2" d="M11.9998 17.5196L16.1498 20.0296C16.9098 20.4896 17.8398 19.8096 17.6398 18.9496L16.5398 14.2296L20.2098 11.0496C20.8798 10.4696 20.5198 9.36958 19.6398 9.29958L14.8098 8.88958L12.9198 4.42958C12.5798 3.61958 11.4198 3.61958 11.0798 4.42958L9.18983 8.87958L4.35983 9.28958C3.47983 9.35958 3.11983 10.4596 3.78983 11.0396L7.45983 14.2196L6.35983 18.9396C6.15983 19.7996 7.08983 20.4796 7.84983 20.0196L11.9998 17.5196V17.5196Z" fill="#1abc9c"/>
+                                </g>
+                            </svg>
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <g id="icon/toggle/star_24px">
+                                <path id="icon/toggle/star_24px_2" d="M11.9998 17.5196L16.1498 20.0296C16.9098 20.4896 17.8398 19.8096 17.6398 18.9496L16.5398 14.2296L20.2098 11.0496C20.8798 10.4696 20.5198 9.36958 19.6398 9.29958L14.8098 8.88958L12.9198 4.42958C12.5798 3.61958 11.4198 3.61958 11.0798 4.42958L9.18983 8.87958L4.35983 9.28958C3.47983 9.35958 3.11983 10.4596 3.78983 11.0396L7.45983 14.2196L6.35983 18.9396C6.15983 19.7996 7.08983 20.4796 7.84983 20.0196L11.9998 17.5196V17.5196Z" fill="#1abc9c"/>
+                                </g>
+                            </svg>
+                        </div>
+                        <p class="showcase__price">MZN11.700 </p>
+                        <p class="showcase__promo">MZN 9.500</>
+                    </div>
+                </div>
+                <div class="showcase__item">
+                    <div class="showcase__img">
+                        <img src="./img/lamp-1.jpg" alt="lampada">
+                    </div>
+                    <div class="showcase__text">
+                        <h3 class="showcase__name">Lampada branca</h3>
+                        <div class="showcase__rating">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <g id="icon/toggle/star_24px">
+                                <path id="icon/toggle/star_24px_2" d="M11.9998 17.5196L16.1498 20.0296C16.9098 20.4896 17.8398 19.8096 17.6398 18.9496L16.5398 14.2296L20.2098 11.0496C20.8798 10.4696 20.5198 9.36958 19.6398 9.29958L14.8098 8.88958L12.9198 4.42958C12.5798 3.61958 11.4198 3.61958 11.0798 4.42958L9.18983 8.87958L4.35983 9.28958C3.47983 9.35958 3.11983 10.4596 3.78983 11.0396L7.45983 14.2196L6.35983 18.9396C6.15983 19.7996 7.08983 20.4796 7.84983 20.0196L11.9998 17.5196V17.5196Z" fill="#1abc9c"/>
+                                </g>
+                            </svg>
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <g id="icon/toggle/star_24px">
+                                <path id="icon/toggle/star_24px_2" d="M11.9998 17.5196L16.1498 20.0296C16.9098 20.4896 17.8398 19.8096 17.6398 18.9496L16.5398 14.2296L20.2098 11.0496C20.8798 10.4696 20.5198 9.36958 19.6398 9.29958L14.8098 8.88958L12.9198 4.42958C12.5798 3.61958 11.4198 3.61958 11.0798 4.42958L9.18983 8.87958L4.35983 9.28958C3.47983 9.35958 3.11983 10.4596 3.78983 11.0396L7.45983 14.2196L6.35983 18.9396C6.15983 19.7996 7.08983 20.4796 7.84983 20.0196L11.9998 17.5196V17.5196Z" fill="#1abc9c"/>
+                                </g>
+                            </svg>
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <g id="icon/toggle/star_24px">
+                                <path id="icon/toggle/star_24px_2" d="M11.9998 17.5196L16.1498 20.0296C16.9098 20.4896 17.8398 19.8096 17.6398 18.9496L16.5398 14.2296L20.2098 11.0496C20.8798 10.4696 20.5198 9.36958 19.6398 9.29958L14.8098 8.88958L12.9198 4.42958C12.5798 3.61958 11.4198 3.61958 11.0798 4.42958L9.18983 8.87958L4.35983 9.28958C3.47983 9.35958 3.11983 10.4596 3.78983 11.0396L7.45983 14.2196L6.35983 18.9396C6.15983 19.7996 7.08983 20.4796 7.84983 20.0196L11.9998 17.5196V17.5196Z" fill="#1abc9c"/>
+                                </g>
+                            </svg>
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <g id="icon/toggle/star_24px">
+                                <path id="icon/toggle/star_24px_2" d="M11.9998 17.5196L16.1498 20.0296C16.9098 20.4896 17.8398 19.8096 17.6398 18.9496L16.5398 14.2296L20.2098 11.0496C20.8798 10.4696 20.5198 9.36958 19.6398 9.29958L14.8098 8.88958L12.9198 4.42958C12.5798 3.61958 11.4198 3.61958 11.0798 4.42958L9.18983 8.87958L4.35983 9.28958C3.47983 9.35958 3.11983 10.4596 3.78983 11.0396L7.45983 14.2196L6.35983 18.9396C6.15983 19.7996 7.08983 20.4796 7.84983 20.0196L11.9998 17.5196V17.5196Z" fill="#1abc9c"/>
+                                </g>
+                            </svg>
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <g id="icon/toggle/star_24px">
+                                <path id="icon/toggle/star_24px_2" d="M11.9998 17.5196L16.1498 20.0296C16.9098 20.4896 17.8398 19.8096 17.6398 18.9496L16.5398 14.2296L20.2098 11.0496C20.8798 10.4696 20.5198 9.36958 19.6398 9.29958L14.8098 8.88958L12.9198 4.42958C12.5798 3.61958 11.4198 3.61958 11.0798 4.42958L9.18983 8.87958L4.35983 9.28958C3.47983 9.35958 3.11983 10.4596 3.78983 11.0396L7.45983 14.2196L6.35983 18.9396C6.15983 19.7996 7.08983 20.4796 7.84983 20.0196L11.9998 17.5196V17.5196Z" fill="#1abc9c"/>
+                                </g>
+                            </svg>
+                        </div>
+                        <p class="showcase__price">MZN8.700 </p>
+                        <p class="showcase__promo">MZN 6.500</>
+                    </div>
+                </div>
+                
+               
+            </div>
+            <div class="showcase">
+                <h2 class="showcase__title">Nova colecção</h2>
+                <div class="showcase__item">
+                    <div class="showcase__img">
+                        <img src="./img/lamp-1.jpg" alt="lampada">
+                    </div>
+                    <div class="showcase__text">
+                        <h3 class="showcase__name">Lampada branca</h3>
+                        <div class="showcase__rating">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <g id="icon/toggle/star_24px">
+                                <path id="icon/toggle/star_24px_2" d="M11.9998 17.5196L16.1498 20.0296C16.9098 20.4896 17.8398 19.8096 17.6398 18.9496L16.5398 14.2296L20.2098 11.0496C20.8798 10.4696 20.5198 9.36958 19.6398 9.29958L14.8098 8.88958L12.9198 4.42958C12.5798 3.61958 11.4198 3.61958 11.0798 4.42958L9.18983 8.87958L4.35983 9.28958C3.47983 9.35958 3.11983 10.4596 3.78983 11.0396L7.45983 14.2196L6.35983 18.9396C6.15983 19.7996 7.08983 20.4796 7.84983 20.0196L11.9998 17.5196V17.5196Z" fill="#1abc9c"/>
+                                </g>
+                            </svg>
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <g id="icon/toggle/star_24px">
+                                <path id="icon/toggle/star_24px_2" d="M11.9998 17.5196L16.1498 20.0296C16.9098 20.4896 17.8398 19.8096 17.6398 18.9496L16.5398 14.2296L20.2098 11.0496C20.8798 10.4696 20.5198 9.36958 19.6398 9.29958L14.8098 8.88958L12.9198 4.42958C12.5798 3.61958 11.4198 3.61958 11.0798 4.42958L9.18983 8.87958L4.35983 9.28958C3.47983 9.35958 3.11983 10.4596 3.78983 11.0396L7.45983 14.2196L6.35983 18.9396C6.15983 19.7996 7.08983 20.4796 7.84983 20.0196L11.9998 17.5196V17.5196Z" fill="#1abc9c"/>
+                                </g>
+                            </svg>
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <g id="icon/toggle/star_24px">
+                                <path id="icon/toggle/star_24px_2" d="M11.9998 17.5196L16.1498 20.0296C16.9098 20.4896 17.8398 19.8096 17.6398 18.9496L16.5398 14.2296L20.2098 11.0496C20.8798 10.4696 20.5198 9.36958 19.6398 9.29958L14.8098 8.88958L12.9198 4.42958C12.5798 3.61958 11.4198 3.61958 11.0798 4.42958L9.18983 8.87958L4.35983 9.28958C3.47983 9.35958 3.11983 10.4596 3.78983 11.0396L7.45983 14.2196L6.35983 18.9396C6.15983 19.7996 7.08983 20.4796 7.84983 20.0196L11.9998 17.5196V17.5196Z" fill="#1abc9c"/>
+                                </g>
+                            </svg>
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <g id="icon/toggle/star_24px">
+                                <path id="icon/toggle/star_24px_2" d="M11.9998 17.5196L16.1498 20.0296C16.9098 20.4896 17.8398 19.8096 17.6398 18.9496L16.5398 14.2296L20.2098 11.0496C20.8798 10.4696 20.5198 9.36958 19.6398 9.29958L14.8098 8.88958L12.9198 4.42958C12.5798 3.61958 11.4198 3.61958 11.0798 4.42958L9.18983 8.87958L4.35983 9.28958C3.47983 9.35958 3.11983 10.4596 3.78983 11.0396L7.45983 14.2196L6.35983 18.9396C6.15983 19.7996 7.08983 20.4796 7.84983 20.0196L11.9998 17.5196V17.5196Z" fill="#1abc9c"/>
+                                </g>
+                            </svg>
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <g id="icon/toggle/star_24px">
+                                <path id="icon/toggle/star_24px_2" d="M11.9998 17.5196L16.1498 20.0296C16.9098 20.4896 17.8398 19.8096 17.6398 18.9496L16.5398 14.2296L20.2098 11.0496C20.8798 10.4696 20.5198 9.36958 19.6398 9.29958L14.8098 8.88958L12.9198 4.42958C12.5798 3.61958 11.4198 3.61958 11.0798 4.42958L9.18983 8.87958L4.35983 9.28958C3.47983 9.35958 3.11983 10.4596 3.78983 11.0396L7.45983 14.2196L6.35983 18.9396C6.15983 19.7996 7.08983 20.4796 7.84983 20.0196L11.9998 17.5196V17.5196Z" fill="#1abc9c"/>
+                                </g>
+                            </svg>
+                        </div>
+                        <p class="showcase__price">MZN8.700 </p>
+                        <p class="showcase__promo">MZN 6.500</>
+                    </div>
+                </div>
+                <div class="showcase__item">
+                    <div class="showcase__img">
+                        <img src="./img/table-1.jpg" alt="mesa">
+                    </div>
+                    <div class="showcase__text">
+                        <h3 class="showcase__name">Mesa</h3>
+                        <div class="showcase__rating">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <g id="icon/toggle/star_24px">
+                                <path id="icon/toggle/star_24px_2" d="M11.9998 17.5196L16.1498 20.0296C16.9098 20.4896 17.8398 19.8096 17.6398 18.9496L16.5398 14.2296L20.2098 11.0496C20.8798 10.4696 20.5198 9.36958 19.6398 9.29958L14.8098 8.88958L12.9198 4.42958C12.5798 3.61958 11.4198 3.61958 11.0798 4.42958L9.18983 8.87958L4.35983 9.28958C3.47983 9.35958 3.11983 10.4596 3.78983 11.0396L7.45983 14.2196L6.35983 18.9396C6.15983 19.7996 7.08983 20.4796 7.84983 20.0196L11.9998 17.5196V17.5196Z" fill="#1abc9c"/>
+                                </g>
+                            </svg>
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <g id="icon/toggle/star_24px">
+                                <path id="icon/toggle/star_24px_2" d="M11.9998 17.5196L16.1498 20.0296C16.9098 20.4896 17.8398 19.8096 17.6398 18.9496L16.5398 14.2296L20.2098 11.0496C20.8798 10.4696 20.5198 9.36958 19.6398 9.29958L14.8098 8.88958L12.9198 4.42958C12.5798 3.61958 11.4198 3.61958 11.0798 4.42958L9.18983 8.87958L4.35983 9.28958C3.47983 9.35958 3.11983 10.4596 3.78983 11.0396L7.45983 14.2196L6.35983 18.9396C6.15983 19.7996 7.08983 20.4796 7.84983 20.0196L11.9998 17.5196V17.5196Z" fill="#1abc9c"/>
+                                </g>
+                            </svg>
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <g id="icon/toggle/star_24px">
+                                <path id="icon/toggle/star_24px_2" d="M11.9998 17.5196L16.1498 20.0296C16.9098 20.4896 17.8398 19.8096 17.6398 18.9496L16.5398 14.2296L20.2098 11.0496C20.8798 10.4696 20.5198 9.36958 19.6398 9.29958L14.8098 8.88958L12.9198 4.42958C12.5798 3.61958 11.4198 3.61958 11.0798 4.42958L9.18983 8.87958L4.35983 9.28958C3.47983 9.35958 3.11983 10.4596 3.78983 11.0396L7.45983 14.2196L6.35983 18.9396C6.15983 19.7996 7.08983 20.4796 7.84983 20.0196L11.9998 17.5196V17.5196Z" fill="#1abc9c"/>
+                                </g>
+                            </svg>
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <g id="icon/toggle/star_24px">
+                                <path id="icon/toggle/star_24px_2" d="M11.9998 17.5196L16.1498 20.0296C16.9098 20.4896 17.8398 19.8096 17.6398 18.9496L16.5398 14.2296L20.2098 11.0496C20.8798 10.4696 20.5198 9.36958 19.6398 9.29958L14.8098 8.88958L12.9198 4.42958C12.5798 3.61958 11.4198 3.61958 11.0798 4.42958L9.18983 8.87958L4.35983 9.28958C3.47983 9.35958 3.11983 10.4596 3.78983 11.0396L7.45983 14.2196L6.35983 18.9396C6.15983 19.7996 7.08983 20.4796 7.84983 20.0196L11.9998 17.5196V17.5196Z" fill="#1abc9c"/>
+                                </g>
+                            </svg>
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <g id="icon/toggle/star_24px">
+                                <path id="icon/toggle/star_24px_2" d="M11.9998 17.5196L16.1498 20.0296C16.9098 20.4896 17.8398 19.8096 17.6398 18.9496L16.5398 14.2296L20.2098 11.0496C20.8798 10.4696 20.5198 9.36958 19.6398 9.29958L14.8098 8.88958L12.9198 4.42958C12.5798 3.61958 11.4198 3.61958 11.0798 4.42958L9.18983 8.87958L4.35983 9.28958C3.47983 9.35958 3.11983 10.4596 3.78983 11.0396L7.45983 14.2196L6.35983 18.9396C6.15983 19.7996 7.08983 20.4796 7.84983 20.0196L11.9998 17.5196V17.5196Z" fill="#1abc9c"/>
+                                </g>
+                            </svg>
+                        </div>
+                        <p class="showcase__price">MZN8.700 </p>
+                        <p class="showcase__promo">MZN 6.500</>
+                    </div>
+                </div>
+                <div class="showcase__item">
+                    <div class="showcase__img">
+                        <img src="./img/lamp.jpg" alt="lampada">
+                    </div>
+                    <div class="showcase__text">
+                        <h3 class="showcase__name">Lampada de cristal</h3>
+                        <div class="showcase__rating">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <g id="icon/toggle/star_24px">
+                                <path id="icon/toggle/star_24px_2" d="M11.9998 17.5196L16.1498 20.0296C16.9098 20.4896 17.8398 19.8096 17.6398 18.9496L16.5398 14.2296L20.2098 11.0496C20.8798 10.4696 20.5198 9.36958 19.6398 9.29958L14.8098 8.88958L12.9198 4.42958C12.5798 3.61958 11.4198 3.61958 11.0798 4.42958L9.18983 8.87958L4.35983 9.28958C3.47983 9.35958 3.11983 10.4596 3.78983 11.0396L7.45983 14.2196L6.35983 18.9396C6.15983 19.7996 7.08983 20.4796 7.84983 20.0196L11.9998 17.5196V17.5196Z" fill="#1abc9c"/>
+                                </g>
+                            </svg>
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <g id="icon/toggle/star_24px">
+                                <path id="icon/toggle/star_24px_2" d="M11.9998 17.5196L16.1498 20.0296C16.9098 20.4896 17.8398 19.8096 17.6398 18.9496L16.5398 14.2296L20.2098 11.0496C20.8798 10.4696 20.5198 9.36958 19.6398 9.29958L14.8098 8.88958L12.9198 4.42958C12.5798 3.61958 11.4198 3.61958 11.0798 4.42958L9.18983 8.87958L4.35983 9.28958C3.47983 9.35958 3.11983 10.4596 3.78983 11.0396L7.45983 14.2196L6.35983 18.9396C6.15983 19.7996 7.08983 20.4796 7.84983 20.0196L11.9998 17.5196V17.5196Z" fill="#1abc9c"/>
+                                </g>
+                            </svg>
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <g id="icon/toggle/star_24px">
+                                <path id="icon/toggle/star_24px_2" d="M11.9998 17.5196L16.1498 20.0296C16.9098 20.4896 17.8398 19.8096 17.6398 18.9496L16.5398 14.2296L20.2098 11.0496C20.8798 10.4696 20.5198 9.36958 19.6398 9.29958L14.8098 8.88958L12.9198 4.42958C12.5798 3.61958 11.4198 3.61958 11.0798 4.42958L9.18983 8.87958L4.35983 9.28958C3.47983 9.35958 3.11983 10.4596 3.78983 11.0396L7.45983 14.2196L6.35983 18.9396C6.15983 19.7996 7.08983 20.4796 7.84983 20.0196L11.9998 17.5196V17.5196Z" fill="#1abc9c"/>
+                                </g>
+                            </svg>
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <g id="icon/toggle/star_24px">
+                                <path id="icon/toggle/star_24px_2" d="M11.9998 17.5196L16.1498 20.0296C16.9098 20.4896 17.8398 19.8096 17.6398 18.9496L16.5398 14.2296L20.2098 11.0496C20.8798 10.4696 20.5198 9.36958 19.6398 9.29958L14.8098 8.88958L12.9198 4.42958C12.5798 3.61958 11.4198 3.61958 11.0798 4.42958L9.18983 8.87958L4.35983 9.28958C3.47983 9.35958 3.11983 10.4596 3.78983 11.0396L7.45983 14.2196L6.35983 18.9396C6.15983 19.7996 7.08983 20.4796 7.84983 20.0196L11.9998 17.5196V17.5196Z" fill="#1abc9c"/>
+                                </g>
+                            </svg>
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <g id="icon/toggle/star_24px">
+                                <path id="icon/toggle/star_24px_2" d="M11.9998 17.5196L16.1498 20.0296C16.9098 20.4896 17.8398 19.8096 17.6398 18.9496L16.5398 14.2296L20.2098 11.0496C20.8798 10.4696 20.5198 9.36958 19.6398 9.29958L14.8098 8.88958L12.9198 4.42958C12.5798 3.61958 11.4198 3.61958 11.0798 4.42958L9.18983 8.87958L4.35983 9.28958C3.47983 9.35958 3.11983 10.4596 3.78983 11.0396L7.45983 14.2196L6.35983 18.9396C6.15983 19.7996 7.08983 20.4796 7.84983 20.0196L11.9998 17.5196V17.5196Z" fill="#1abc9c"/>
+                                </g>
+                            </svg>
+                        </div>
+                        <p class="showcase__price">MZN10.700 </p>
+                        <p class="showcase__promo">MZN 8.500</>
+                    </div>
+                </div>
+                <div class="showcase__item">
+                    <div class="showcase__img">
+                        <img src="./img/chair-6.jpg" alt="cadeira">
+                    </div>
+                    <div class="showcase__text">
+                        <h3 class="showcase__name">Cadeira azul</h3>
+                        <div class="showcase__rating">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <g id="icon/toggle/star_24px">
+                                <path id="icon/toggle/star_24px_2" d="M11.9998 17.5196L16.1498 20.0296C16.9098 20.4896 17.8398 19.8096 17.6398 18.9496L16.5398 14.2296L20.2098 11.0496C20.8798 10.4696 20.5198 9.36958 19.6398 9.29958L14.8098 8.88958L12.9198 4.42958C12.5798 3.61958 11.4198 3.61958 11.0798 4.42958L9.18983 8.87958L4.35983 9.28958C3.47983 9.35958 3.11983 10.4596 3.78983 11.0396L7.45983 14.2196L6.35983 18.9396C6.15983 19.7996 7.08983 20.4796 7.84983 20.0196L11.9998 17.5196V17.5196Z" fill="#1abc9c"/>
+                                </g>
+                            </svg>
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <g id="icon/toggle/star_24px">
+                                <path id="icon/toggle/star_24px_2" d="M11.9998 17.5196L16.1498 20.0296C16.9098 20.4896 17.8398 19.8096 17.6398 18.9496L16.5398 14.2296L20.2098 11.0496C20.8798 10.4696 20.5198 9.36958 19.6398 9.29958L14.8098 8.88958L12.9198 4.42958C12.5798 3.61958 11.4198 3.61958 11.0798 4.42958L9.18983 8.87958L4.35983 9.28958C3.47983 9.35958 3.11983 10.4596 3.78983 11.0396L7.45983 14.2196L6.35983 18.9396C6.15983 19.7996 7.08983 20.4796 7.84983 20.0196L11.9998 17.5196V17.5196Z" fill="#1abc9c"/>
+                                </g>
+                            </svg>
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <g id="icon/toggle/star_24px">
+                                <path id="icon/toggle/star_24px_2" d="M11.9998 17.5196L16.1498 20.0296C16.9098 20.4896 17.8398 19.8096 17.6398 18.9496L16.5398 14.2296L20.2098 11.0496C20.8798 10.4696 20.5198 9.36958 19.6398 9.29958L14.8098 8.88958L12.9198 4.42958C12.5798 3.61958 11.4198 3.61958 11.0798 4.42958L9.18983 8.87958L4.35983 9.28958C3.47983 9.35958 3.11983 10.4596 3.78983 11.0396L7.45983 14.2196L6.35983 18.9396C6.15983 19.7996 7.08983 20.4796 7.84983 20.0196L11.9998 17.5196V17.5196Z" fill="#1abc9c"/>
+                                </g>
+                            </svg>
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <g id="icon/toggle/star_24px">
+                                <path id="icon/toggle/star_24px_2" d="M11.9998 17.5196L16.1498 20.0296C16.9098 20.4896 17.8398 19.8096 17.6398 18.9496L16.5398 14.2296L20.2098 11.0496C20.8798 10.4696 20.5198 9.36958 19.6398 9.29958L14.8098 8.88958L12.9198 4.42958C12.5798 3.61958 11.4198 3.61958 11.0798 4.42958L9.18983 8.87958L4.35983 9.28958C3.47983 9.35958 3.11983 10.4596 3.78983 11.0396L7.45983 14.2196L6.35983 18.9396C6.15983 19.7996 7.08983 20.4796 7.84983 20.0196L11.9998 17.5196V17.5196Z" fill="#1abc9c"/>
+                                </g>
+                            </svg>
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <g id="icon/toggle/star_24px">
+                                <path id="icon/toggle/star_24px_2" d="M11.9998 17.5196L16.1498 20.0296C16.9098 20.4896 17.8398 19.8096 17.6398 18.9496L16.5398 14.2296L20.2098 11.0496C20.8798 10.4696 20.5198 9.36958 19.6398 9.29958L14.8098 8.88958L12.9198 4.42958C12.5798 3.61958 11.4198 3.61958 11.0798 4.42958L9.18983 8.87958L4.35983 9.28958C3.47983 9.35958 3.11983 10.4596 3.78983 11.0396L7.45983 14.2196L6.35983 18.9396C6.15983 19.7996 7.08983 20.4796 7.84983 20.0196L11.9998 17.5196V17.5196Z" fill="#1abc9c"/>
+                                </g>
+                            </svg>
+                        </div>
+                        <p class="showcase__price">MZN7.700 </p>
+                        <p class="showcase__promo">MZN 4.999</>
+                    </div>
+                </div>
+                
+               
+            </div>
+        </section>
+
+        <section class="testimonial-section">
+                <h2 class="testimonial__heading">O que nossos clientes falam sobre nós</h2>
+                <div class="slider-4">
+                    <div class="slider__item-test">
+                        <div class="testimonial">
+                            <p class="testimonial__text">
+                                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iste natus,
+                                 nam enim eum necessitatibus deleniti non ducimus facilis. Praesentium in quae,
+                                 molestiae ipsam aperiam ullam neque. Asperiores odio quis iste?
+                                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat 
+                            </p>
+                            <div class="testimonial__user">
+                                <div class="testimonial__img">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <g id="icon/social/person_24px">
+                                        <path id="icon/social/person_24px_2" fill-rule="evenodd" clip-rule="evenodd" d="M16 8C16 10.21 14.21 12 12 12C9.79 12 8 10.21 8 8C8 5.79 9.79 4 12 4C14.21 4 16 5.79 16 8ZM4 18C4 15.34 9.33 14 12 14C14.67 14 20 15.34 20 18V19C20 19.55 19.55 20 19 20H5C4.45 20 4 19.55 4 19V18Z" fill="#6D7D8B"/>
+                                        </g>
+                                    </svg>  
+                                </div>   
+                               <div class="testimonial__data">
+                                    <p class="testimonial__user-name">Helton Furau</p>
+                                    <p class="testimonial__user-job">Cliente</p>                                                                  
+                                </div>   
+                            </div>
+                        </div>
+                        
+                    </div>
+                    <div class="slider__item-test">
+                        <div class="testimonial">
+                            <p class="testimonial__text">
+                                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iste natus,
+                                 nam enim eum necessitatibus deleniti non ducimus facilis. Praesentium in quae,
+                                 molestiae ipsam aperiam ullam neque. Asperiores odio quis iste?
+                                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat 
+                                 repudiandae error fugiat, alias fugit inventore beatae nobis 
+                                 impedit dolorum adipisci rem aperiam assumenda tempore 
+                                 blanditiis dicta, porro repellat dignissimos reprehenderit.
+                            </p>
+                            <div class="testimonial__user">
+                                <div class="testimonial__img">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <g id="icon/social/person_24px">
+                                        <path id="icon/social/person_24px_2" fill-rule="evenodd" clip-rule="evenodd" d="M16 8C16 10.21 14.21 12 12 12C9.79 12 8 10.21 8 8C8 5.79 9.79 4 12 4C14.21 4 16 5.79 16 8ZM4 18C4 15.34 9.33 14 12 14C14.67 14 20 15.34 20 18V19C20 19.55 19.55 20 19 20H5C4.45 20 4 19.55 4 19V18Z" fill="#6D7D8B"/>
+                                        </g>
+                                    </svg>  
+                                </div>   
+                               <div class="testimonial__data">
+                                    <p class="testimonial__user-name">Hélio Mapupo</p>
+                                    <p class="testimonial__user-job">Cliente</p>                                                                  
+                                </div>   
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+            
+        </section>
+
+        <footer class="footer-section">
+            <div class="footer">
+                <div class="footer__item">
+                    <h3 class="footer__heading">Contacte - nos</h3>
+                    <p class="footer__text">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g id="icon/action/home_24px">
+                            <path id="icon/action/home_24px_2" d="M9.99766 19.3275V14.3275H13.9977V19.3275C13.9977 19.8775 14.4477 20.3275 14.9977 20.3275H17.9977C18.5477 20.3275 18.9977 19.8775 18.9977 19.3275V12.3275H20.6977C21.1577 12.3275 21.3777 11.7575 21.0277 11.4575L12.6677 3.92749C12.2877 3.58749 11.7077 3.58749 11.3277 3.92749L2.96766 11.4575C2.62766 11.7575 2.83766 12.3275 3.29766 12.3275H4.99766V19.3275C4.99766 19.8775 5.44766 20.3275 5.99766 20.3275H8.99766C9.54766 20.3275 9.99766 19.8775 9.99766 19.3275Z" fill="#6D7D8B"/>
+                            </g>
+                        </svg>
+                        Inhambane - Maxixe
+                    </p>
+                    <p class="footer__text">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g id="icon/communication/message_24px">
+                            <path id="icon/communication/message_24px_2" fill-rule="evenodd" clip-rule="evenodd" d="M4 2H20C21.1 2 22 2.9 22 4V16C22 17.1 21.1 18 20 18H6L2 22L2.01 4C2.01 2.9 2.9 2 4 2ZM7 14H17C17.55 14 18 13.55 18 13C18 12.45 17.55 12 17 12H7C6.45 12 6 12.45 6 13C6 13.55 6.45 14 7 14ZM17 11H7C6.45 11 6 10.55 6 10C6 9.45 6.45 9 7 9H17C17.55 9 18 9.45 18 10C18 10.55 17.55 11 17 11ZM7 8H17C17.55 8 18 7.55 18 7C18 6.45 17.55 6 17 6H7C6.45 6 6 6.45 6 7C6 7.55 6.45 8 7 8Z" fill="#6D7D8B"/>
+                            </g>
+                        </svg>
+                        Messagem de texto
+                    </p>
+                    <p class="footer__text">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g id="icon/communication/call_24px">
+                            <path id="icon/communication/call_24px_2" d="M19.2217 15.2682L16.6817 14.9782C16.0717 14.9082 15.4717 15.1182 15.0417 15.5482L13.2017 17.3882C10.3717 15.9482 8.05174 13.6382 6.61174 10.7982L8.46174 8.94819C8.89174 8.51819 9.10174 7.91819 9.03174 7.30819L8.74174 4.78819C8.62174 3.77819 7.77174 3.01819 6.75174 3.01819H5.02174C3.89174 3.01819 2.95174 3.95819 3.02174 5.08819C3.55174 13.6282 10.3817 20.4482 18.9117 20.9782C20.0417 21.0482 20.9817 20.1082 20.9817 18.9782V17.2482C20.9917 16.2382 20.2317 15.3882 19.2217 15.2682Z" fill="#6D7D8B"/>
+                            </g>
+                        </svg>             
+                        +258845031480
+                    </p>
+                </div>
+                <div class="footer__item">
+                    <h3 class="footer__heading">Nossos serviços</h3>
+                    <p class="footer__text">
+                        Inhambane 
+                    </p>
+                    <p class="footer__text">     
+                        Maputo
+                    </p>
+                    <p class="footer__text">                              
+                        Gaza
+                    </p>
+                </div>
+                <div class="footer__item">
+                    <h3 class="footer__heading">Extras</h3>
+                    <p class="footer__text">
+                        Nova colecção
+                    </p>
+                    <p class="footer__text">     
+                        Nossas lojas
+                    </p>
+                    <p class="footer__text">                              
+                        Blog
+                    </p>
+                </div>
+            </div>
+            <div class="copyright">
+                &copy; 2020 &hyphen; Hélio Mapupo
+             
+            </div>
+
+        </footer>
+   </div> 
+
+ 
+
+   <script src="./slick/jquery.3.5.1.js"></script>
+   <script type="text/javascript" src="slick/slick.min.js"></script>
+   <script src="slick/slickCode.js"></script>
+</body>
+</html>

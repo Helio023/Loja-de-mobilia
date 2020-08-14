@@ -1,0 +1,48 @@
+.footer {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+  grid-gap: 3rem;
+  padding: 0 5rem;
+  margin-bottom: 1rem;
+
+  @media only screen and (max-width: 41em) {
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    grid-gap: 3rem;
+  }
+  &__item:not(first-child) {
+    @media only screen and (max-width: $bp-phone) {
+      margin-top: 2rem;
+    }
+  }
+  &__heading {
+    font-size: 2rem;
+    color: $gray;
+    margin-bottom: 1.5rem;
+  }
+
+  &__text:not(:first-child) {
+    margin-top: 1rem;
+  }
+
+  &__text {
+    display: flex;
+    align-items: center;
+    font-size: 1.6rem;
+    color: $gray-2;
+
+    svg {
+      margin-right: 1rem;
+    }
+  }
+}
+.copyright {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 10rem;
+  font-size: 1.6rem;
+  background-color: $green;
+  color: $white;
+  font-weight: bold;
+  padding: 0 2rem;
+}
